@@ -1,13 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <CONFIG>
   <ProjectOptions>
-    <Version Value="9"/>
+    <Version Value="7"/>
     <General>
       <Flags>
+        <AlwaysBuild Value="False"/>
         <LRSInOutputDirectory Value="False"/>
       </Flags>
       <MainUnit Value="0"/>
+      <TargetFileExt Value=""/>
       <UseAppBundle Value="False"/>
+      <ActiveEditorIndexAtStart Value="0"/>
     </General>
     <i18n>
       <EnableI18N Value="True"/>
@@ -16,16 +19,12 @@
     <VersionInfo>
       <UseVersionInfo Value="True"/>
       <AutoIncrementBuild Value="True"/>
-      <MinorVersionNr Value="1"/>
-      <BuildNr Value="8"/>
-      <StringTable CompanyName="Netsika" InternalName="alefa" ProductName="alefa" ProductVersion=""/>
+      <CurrentMajorRevNr Value="1"/>
+      <CurrentBuildNr Value="15"/>
+      <ProjectVersion Value="0.1.0.2"/>
     </VersionInfo>
-    <BuildModes Count="1">
-      <Item1 Name="default" Default="True"/>
-    </BuildModes>
     <PublishOptions>
       <Version Value="2"/>
-      <DestinationDirectory Value="/home/thierry/work/devel/alefa"/>
       <IgnoreBinaries Value="False"/>
       <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
       <ExcludeFileFilter Value="*.(bak|ppu|ppw|o|so);*~;backup"/>
@@ -33,170 +32,197 @@
     <RunParams>
       <local>
         <FormatVersion Value="1"/>
-        <CommandLineParams Value="-i -w 5 &quot;echo Mandeha tsara i alefa! Miandry 5s..&quot;"/>
-        <LaunchingApplication Use="True"/>
+        <LaunchingApplication Use="True" PathPlusParams="/usr/X11R6/bin/xterm -T 'Lazarus Run Output' -e $(LazarusDir)/tools/runwait.sh $(TargetCmdLine)"/>
       </local>
     </RunParams>
-    <Units Count="17">
+    <Units Count="18">
       <Unit0>
         <Filename Value="alefa.lpr"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
-        <TopLine Value="76"/>
-        <CursorPos X="26" Y="82"/>
-        <UsageCount Value="39"/>
+        <UnitName Value="alefa"/>
+        <CursorPos X="1" Y="52"/>
+        <TopLine Value="41"/>
+        <EditorIndex Value="0"/>
+        <UsageCount Value="37"/>
         <Bookmarks Count="1">
-          <Item0 Y="77"/>
+          <Item0 X="1" Y="79" ID="0"/>
         </Bookmarks>
         <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit0>
       <Unit1>
-        <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/packages/fcl-base/src/inc/custapp.pp"/>
+        <Filename Value="../../../../../usr/local/src/fpcbuild-2.2.0/fpcsrc/packages/fcl-base/src/inc/custapp.pp"/>
         <UnitName Value="CustApp"/>
-        <TopLine Value="231"/>
         <CursorPos X="3" Y="239"/>
+        <TopLine Value="231"/>
         <UsageCount Value="18"/>
       </Unit1>
       <Unit2>
-        <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/sysutils/sysutilh.inc"/>
-        <TopLine Value="158"/>
+        <Filename Value="../../../../../usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/sysutils/sysutilh.inc"/>
         <CursorPos X="14" Y="169"/>
+        <TopLine Value="158"/>
         <UsageCount Value="9"/>
       </Unit2>
       <Unit3>
-        <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/sysutils/sysutils.inc"/>
-        <TopLine Value="445"/>
+        <Filename Value="../../../../../usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/sysutils/sysutils.inc"/>
         <CursorPos X="3" Y="453"/>
+        <TopLine Value="445"/>
         <UsageCount Value="9"/>
       </Unit3>
       <Unit4>
-        <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/sysutils/osutilsh.inc"/>
-        <TopLine Value="13"/>
+        <Filename Value="../../../../../usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/sysutils/osutilsh.inc"/>
         <CursorPos X="11" Y="25"/>
+        <TopLine Value="13"/>
         <UsageCount Value="12"/>
       </Unit4>
       <Unit5>
-        <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/unix/sysutils.pp"/>
-        <TopLine Value="886"/>
+        <Filename Value="../../../../../usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/unix/sysutils.pp"/>
+        <UnitName Value="sysutils"/>
         <CursorPos X="50" Y="883"/>
+        <TopLine Value="886"/>
         <UsageCount Value="18"/>
       </Unit5>
       <Unit6>
-        <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/unix/bunxh.inc"/>
-        <TopLine Value="50"/>
+        <Filename Value="../../../../../usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/unix/bunxh.inc"/>
         <CursorPos X="15" Y="61"/>
+        <TopLine Value="50"/>
         <UsageCount Value="9"/>
       </Unit6>
       <Unit7>
-        <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/linux/bunxsysc.inc"/>
-        <TopLine Value="373"/>
+        <Filename Value="../../../../../usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/linux/bunxsysc.inc"/>
         <CursorPos X="3" Y="376"/>
+        <TopLine Value="373"/>
         <UsageCount Value="9"/>
       </Unit7>
       <Unit8>
-        <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/sysutils/syswideh.inc"/>
-        <TopLine Value="11"/>
+        <Filename Value="../../../../../usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/sysutils/syswideh.inc"/>
         <CursorPos X="11" Y="21"/>
+        <TopLine Value="11"/>
         <UsageCount Value="18"/>
       </Unit8>
       <Unit9>
-        <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/sysutils/syswide.inc"/>
+        <Filename Value="../../../../../usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/sysutils/syswide.inc"/>
+        <CursorPos X="1" Y="40"/>
         <TopLine Value="35"/>
-        <CursorPos Y="40"/>
         <UsageCount Value="18"/>
       </Unit9>
       <Unit10>
-        <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/sysutils/sysstrh.inc"/>
-        <TopLine Value="219"/>
+        <Filename Value="../../../../../usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/sysutils/sysstrh.inc"/>
         <CursorPos X="10" Y="230"/>
+        <TopLine Value="219"/>
         <UsageCount Value="18"/>
       </Unit10>
       <Unit11>
-        <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/sysutils/sysstr.inc"/>
+        <Filename Value="../../../../../usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/sysutils/sysstr.inc"/>
+        <CursorPos X="1" Y="541"/>
         <TopLine Value="541"/>
-        <CursorPos Y="541"/>
         <UsageCount Value="18"/>
       </Unit11>
       <Unit12>
-        <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/sysutils/syspchh.inc"/>
-        <TopLine Value="14"/>
+        <Filename Value="../../../../../usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/sysutils/syspchh.inc"/>
         <CursorPos X="10" Y="25"/>
+        <TopLine Value="14"/>
         <UsageCount Value="18"/>
       </Unit12>
       <Unit13>
-        <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/x86_64/strings.inc"/>
-        <TopLine Value="12"/>
+        <Filename Value="../../../../../usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/x86_64/strings.inc"/>
         <CursorPos X="10" Y="12"/>
+        <TopLine Value="12"/>
         <UsageCount Value="18"/>
       </Unit13>
       <Unit14>
-        <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/inc/genstr.inc"/>
-        <TopLine Value="202"/>
+        <Filename Value="../../../../../usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/inc/genstr.inc"/>
         <CursorPos X="9" Y="208"/>
+        <TopLine Value="202"/>
         <UsageCount Value="18"/>
       </Unit14>
       <Unit15>
-        <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/inc/stringsi.inc"/>
-        <TopLine Value="37"/>
+        <Filename Value="../../../../../usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/inc/stringsi.inc"/>
         <CursorPos X="10" Y="37"/>
+        <TopLine Value="37"/>
         <UsageCount Value="18"/>
       </Unit15>
       <Unit16>
-        <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/objpas.pp"/>
+        <Filename Value="../../../../../usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/objpas.pp"/>
+        <UnitName Value="objpas"/>
+        <CursorPos X="1" Y="186"/>
         <TopLine Value="181"/>
-        <CursorPos Y="186"/>
         <UsageCount Value="17"/>
       </Unit16>
+      <Unit17>
+        <Filename Value="../../../../../usr/local/src/svn/lazarus/trunk/ide/lazarus.pp"/>
+        <UnitName Value="Lazarus"/>
+        <CursorPos X="1" Y="130"/>
+        <TopLine Value="108"/>
+        <EditorIndex Value="1"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit17>
     </Units>
-    <JumpHistory Count="6" HistoryIndex="5">
+    <JumpHistory Count="10" HistoryIndex="9">
       <Position1>
         <Filename Value="alefa.lpr"/>
-        <Caret Line="76" Column="69" TopLine="69"/>
+        <Caret Line="72" Column="39" TopLine="69"/>
       </Position1>
       <Position2>
         <Filename Value="alefa.lpr"/>
-        <Caret Line="50" Column="5" TopLine="36"/>
+        <Caret Line="44" Column="44" TopLine="33"/>
       </Position2>
       <Position3>
         <Filename Value="alefa.lpr"/>
-        <Caret Line="76" Column="12" TopLine="62"/>
+        <Caret Line="131" Column="3" TopLine="131"/>
       </Position3>
       <Position4>
         <Filename Value="alefa.lpr"/>
-        <Caret Line="159" Column="12" TopLine="144"/>
+        <Caret Line="1" Column="1" TopLine="1"/>
       </Position4>
       <Position5>
         <Filename Value="alefa.lpr"/>
-        <Caret Line="165" Column="3" TopLine="163"/>
+        <Caret Line="5" Column="51" TopLine="1"/>
       </Position5>
       <Position6>
         <Filename Value="alefa.lpr"/>
-        <Caret Line="71" Column="3" TopLine="56"/>
+        <Caret Line="35" Column="24" TopLine="25"/>
       </Position6>
+      <Position7>
+        <Filename Value="alefa.lpr"/>
+        <Caret Line="190" Column="41" TopLine="180"/>
+      </Position7>
+      <Position8>
+        <Filename Value="../../../../../usr/local/src/svn/lazarus/trunk/ide/lazarus.pp"/>
+        <Caret Line="1" Column="1" TopLine="1"/>
+      </Position8>
+      <Position9>
+        <Filename Value="../../../../../usr/local/src/svn/lazarus/trunk/ide/lazarus.pp"/>
+        <Caret Line="130" Column="1" TopLine="109"/>
+      </Position9>
+      <Position10>
+        <Filename Value="alefa.lpr"/>
+        <Caret Line="221" Column="35" TopLine="198"/>
+      </Position10>
     </JumpHistory>
   </ProjectOptions>
   <CompilerOptions>
-    <Version Value="11"/>
+    <Version Value="8"/>
     <SearchPaths>
       <UnitOutputDirectory Value="$(TargetCPU)/$(TargetOS)"/>
     </SearchPaths>
     <Parsing>
       <SyntaxOptions>
         <CStyleOperator Value="False"/>
-        <UseAnsiStrings Value="False"/>
       </SyntaxOptions>
     </Parsing>
     <CodeGeneration>
-      <TargetOS Value="linux"/>
+      <TargetCPU Value="x86_64"/>
+      <TargetOS Value="Linux"/>
     </CodeGeneration>
     <Linking>
       <Debugging>
-        <DebugInfoType Value="dsStabs"/>
+        <GenerateDebugInfo Value="True"/>
         <GenGProfCode Value="True"/>
       </Debugging>
     </Linking>
     <Other>
+      <CompilerPath Value="$(CompPath)"/>
       <CreateMakefileOnBuild Value="True"/>
     </Other>
   </CompilerOptions>

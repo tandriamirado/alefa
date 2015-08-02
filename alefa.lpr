@@ -28,10 +28,12 @@ uses
   cthreads,
   {$ENDIF}{$ENDIF}
   Classes, SysUtils, CustApp,
+  { you can add units after this }
   process;
 
 const
-  authorMail = 'thierry.andriamirado@free.fr';
+  authorMail = 'thierry_andriamirado@yahoo.fr';
+  authorTwitter = 'http://twitter.com/tandriamirado';
   
 type
 
@@ -79,7 +81,7 @@ begin
   repeat
     if nbTries > 0 then begin
        Sleep(optWait);
-       writeln('++Alefa: Try #' + IntToStr(nbTries + 1) + ' / ' + nbEndStr);
+       writeln('Try #' + IntToStr(nbTries + 1) + '/' + nbEndStr);
     end;
     procExec.Active := true;           // go!
     nbTries := nbTries + 1;
@@ -185,7 +187,7 @@ procedure TAlefa.WriteHelp;
 begin
   { add your help code here }
   writeln('Alefa, application launch helper');
-  writeln('Copyright (c) 2008 by Thierry Andriamirado');
+  writeln('Copyright (c) 2009 by Thierry Andriamirado');
   WriteLn('');
   writeln('Usage: ', ExtractFileName(ExeName),' [OPTION]... FILE');
   WriteLn('Execute FILE. FILE has to be the last argument, after all the OPTIONs.');
@@ -199,7 +201,8 @@ begin
   WriteLn('  -w,  --wait=SECONDS       wait SECONDS between retries.');
   WriteLn('  -x,  --exitcode           show exitcode. Can be useful for testing purposes.');
   WriteLn('');
-  WriteLn('Report bugs to <' + authorMail + '>');
+//  WriteLn('Report bugs to <' + authorMail + '>');
+  WriteLn('Report bugs to ' + authorTwitter);
 
 end;
 
@@ -213,7 +216,9 @@ begin
   WriteLn('');
   WriteLn('Mandatory arguments to long options are mandatory for short options too.');
   WriteLn('');
-  WriteLn('Report bugs to <' + authorMail + '>');
+//  WriteLn('Report bugs to <' + authorMail + '>');
+  WriteLn('Report bugs to ' + authorTwitter);
+
 end;
 
 var
@@ -222,8 +227,6 @@ var
 {$IFDEF WINDOWS}{$R project1.rc}{$ENDIF}
 
 {$IFDEF WINDOWS}{$R alefa.rc}{$ENDIF}
-
-{$R *.res}
 
 begin
   Application:=TAlefa.Create(nil);
