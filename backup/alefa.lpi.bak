@@ -8,7 +8,6 @@
       </Flags>
       <MainUnit Value="0"/>
       <UseAppBundle Value="False"/>
-      <ActiveWindowIndexAtStart Value="0"/>
     </General>
     <i18n>
       <EnableI18N Value="True"/>
@@ -18,8 +17,8 @@
       <UseVersionInfo Value="True"/>
       <AutoIncrementBuild Value="True"/>
       <MinorVersionNr Value="1"/>
-      <BuildNr Value="8"/>
-      <StringTable CompanyName="Netsika" InternalName="alefa" ProductName="alefa" ProductVersion=""/>
+      <BuildNr Value="15"/>
+      <StringTable ProductVersion="0.1.0.2"/>
     </VersionInfo>
     <BuildModes Count="1">
       <Item1 Name="default" Default="True"/>
@@ -33,23 +32,19 @@
     <RunParams>
       <local>
         <FormatVersion Value="1"/>
-        <CommandLineParams Value="-i -w 5 &quot;echo Mandeha tsara i alefa! Miandry 5s..&quot;"/>
-        <LaunchingApplication Use="True"/>
+        <LaunchingApplication Use="True" PathPlusParams="/usr/X11R6/bin/xterm -T 'Lazarus Run Output' -e $(LazarusDir)/tools/runwait.sh $(TargetCmdLine)"/>
       </local>
     </RunParams>
-    <Units Count="17">
+    <Units Count="18">
       <Unit0>
         <Filename Value="alefa.lpr"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="alefa"/>
         <IsVisibleTab Value="True"/>
-        <EditorIndex Value="0"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="76"/>
-        <CursorPos X="26" Y="82"/>
-        <UsageCount Value="39"/>
+        <TopLine Value="41"/>
+        <CursorPos Y="52"/>
+        <UsageCount Value="37"/>
         <Bookmarks Count="1">
-          <Item0 X="1" Y="77" ID="0"/>
+          <Item0 Y="79"/>
         </Bookmarks>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -81,7 +76,6 @@
       </Unit4>
       <Unit5>
         <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/unix/sysutils.pp"/>
-        <UnitName Value="sysutils"/>
         <TopLine Value="886"/>
         <CursorPos X="50" Y="883"/>
         <UsageCount Value="18"/>
@@ -107,7 +101,7 @@
       <Unit9>
         <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/sysutils/syswide.inc"/>
         <TopLine Value="35"/>
-        <CursorPos X="1" Y="40"/>
+        <CursorPos Y="40"/>
         <UsageCount Value="18"/>
       </Unit9>
       <Unit10>
@@ -119,7 +113,7 @@
       <Unit11>
         <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/sysutils/sysstr.inc"/>
         <TopLine Value="541"/>
-        <CursorPos X="1" Y="541"/>
+        <CursorPos Y="541"/>
         <UsageCount Value="18"/>
       </Unit11>
       <Unit12>
@@ -148,43 +142,59 @@
       </Unit15>
       <Unit16>
         <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/objpas.pp"/>
-        <UnitName Value="objpas"/>
         <TopLine Value="181"/>
-        <CursorPos X="1" Y="186"/>
+        <CursorPos Y="186"/>
         <UsageCount Value="17"/>
       </Unit16>
+      <Unit17>
+        <Filename Value="/usr/local/src/svn/lazarus/trunk/ide/lazarus.pp"/>
+        <UnitName Value="Lazarus"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="108"/>
+        <CursorPos Y="130"/>
+        <UsageCount Value="10"/>
+        <LoadedDesigner Value="True"/>
+      </Unit17>
     </Units>
-    <JumpHistory Count="6" HistoryIndex="5">
+    <JumpHistory Count="8" HistoryIndex="7">
       <Position1>
         <Filename Value="alefa.lpr"/>
-        <Caret Line="76" Column="69" TopLine="69"/>
+        <Caret Line="72" Column="39" TopLine="69"/>
       </Position1>
       <Position2>
         <Filename Value="alefa.lpr"/>
-        <Caret Line="50" Column="5" TopLine="36"/>
+        <Caret Line="44" Column="44" TopLine="33"/>
       </Position2>
       <Position3>
         <Filename Value="alefa.lpr"/>
-        <Caret Line="76" Column="12" TopLine="62"/>
+        <Caret Line="131" Column="3" TopLine="131"/>
       </Position3>
       <Position4>
         <Filename Value="alefa.lpr"/>
-        <Caret Line="159" Column="12" TopLine="144"/>
       </Position4>
       <Position5>
         <Filename Value="alefa.lpr"/>
-        <Caret Line="165" Column="3" TopLine="163"/>
+        <Caret Line="5" Column="51"/>
       </Position5>
       <Position6>
         <Filename Value="alefa.lpr"/>
-        <Caret Line="71" Column="3" TopLine="56"/>
+        <Caret Line="35" Column="24" TopLine="25"/>
       </Position6>
+      <Position7>
+        <Filename Value="alefa.lpr"/>
+        <Caret Line="190" Column="41" TopLine="180"/>
+      </Position7>
+      <Position8>
+        <Filename Value="alefa.lpr"/>
+        <Caret Line="221" Column="35" TopLine="198"/>
+      </Position8>
     </JumpHistory>
   </ProjectOptions>
   <CompilerOptions>
     <Version Value="11"/>
     <SearchPaths>
-      <UnitOutputDirectory Value="$(TargetCPU)/$(TargetOS)"/>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Parsing>
       <SyntaxOptions>
@@ -193,6 +203,7 @@
       </SyntaxOptions>
     </Parsing>
     <CodeGeneration>
+      <TargetCPU Value="x86_64"/>
       <TargetOS Value="linux"/>
     </CodeGeneration>
     <Linking>
@@ -202,10 +213,6 @@
       </Debugging>
     </Linking>
     <Other>
-      <CompilerMessages>
-        <UseMsgFile Value="True"/>
-      </CompilerMessages>
-      <CompilerPath Value="$(CompPath)"/>
       <CreateMakefileOnBuild Value="True"/>
     </Other>
   </CompilerOptions>
@@ -219,5 +226,4 @@
       </Item2>
     </Exceptions>
   </Debugging>
-  <EditorMacros Count="0"/>
 </CONFIG>
