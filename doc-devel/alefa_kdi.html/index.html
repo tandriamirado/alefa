@@ -1,0 +1,78 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+	<link href="def.css" rel="stylesheet" type="text/css"/>
+	<title>alefa</title>
+</head>
+<body>
+	<h1><span class="show_niv">1</span>substitute</h1>
+<p>Commande de substitution à executer SI la commande n'a pas retourné un exitcode de 0 après un certain nombre d'essais.</p><p></p><h1><span class="show_niv">2</span>mail</h1>
+<h2><span class="show_niv">2.1</span>mail if succeeded</h2>
+<h2><span class="show_niv">2.2</span>mail if failed</h2>
+<h2><span class="show_niv">2.3</span>mail result</h2>
+<h1><span class="show_niv">3</span>if</h1>
+<p>--if </p><p>Execute uniquement si la condition est ok</p><p></p><h2><span class="show_niv">3.1</span>creneau horaire</h2>
+<h2><span class="show_niv">3.2</span>resultat d'une autre commande</h2>
+<p>Utile pour tous les autres cas non-prévus par 'alefa'</p><li>exitcode = 0</li><li>exitcode = x</li><h2><span class="show_niv">3.3</span>existence d'un fichier</h2>
+<h3><span class="show_niv">3.3.1</span>fichier existe</h3>
+<h3><span class="show_niv">3.3.2</span>fichier n'existe pas</h3>
+<h2><span class="show_niv">3.4</span>programme en cours d'execution</h2>
+<h3><span class="show_niv">3.4.1</span>pgm est en cours d'exec</h3>
+<h3><span class="show_niv">3.4.2</span>pgm n'est pas en cours d'execution</h3>
+<h2><span class="show_niv">3.5</span>Connecté</h2>
+<h2><span class="show_niv">3.6</span>partition montée</h2>
+<h2><span class="show_niv">3.7</span>périphérique connecté</h2>
+<p>ex: un périphérique USB</p><p></p><h2><span class="show_niv">3.8</span>un hote sur le reseau répond</h2>
+<li>ping</li><li></li><h1><span class="show_niv">4</span>Reprise</h1>
+<p>Continue si interrompu (cas de reboot ou halt, etc...)</p><p></p><h1><span class="show_niv">5</span>next execute</h1>
+<p>Commande ou shell à executer si l'action a réussi ou a échoué.</p><p></p><h2><span class="show_niv">5.1</span>if failed</h2>
+<h2><span class="show_niv">5.2</span>if succeeded</h2>
+<h1><span class="show_niv">6</span>shell-script dir</h1>
+<li>reconnaissance automatique de la commande à exécuter, exemple 'cmdxxxx' permettant de lancer:</li><li>cmdxxxx-before (à lancer avant de lancer l'action)</li><li>cmdxxxx-failed</li><li>cmdxxxx-succeeded</li><p>L'utilisateur peut créer des scripts à mettre dans ce repertoire, respectant ces noms.</p><li>Tester et exec cmdxxxx-before avant de lancer</li><li>tester et exec cmdxxxx-failed ou cmdxxxx-succeeded après avoir lancé.</li><h1><span class="show_niv">7</span>user</h1>
+<p>Run as 'user'. sudo si shell, gksu si gnome, etc...</p><li>saisie + cryptage du mot de passe (???!!!)</li><li>le plus simple reste de lancer 'alefa' avec un sudo (!)</li><h1><span class="show_niv">8</span>exec de commande à distance</h1>
+<p>rsh? ssh?</p><h2><span class="show_niv">8.1</span>exec de la même commande sur plusieurs machines en même temps</h2>
+<li>log séparé? (= 1 par machine? 1 sur chaque machine?)</li><li>1 log commun sur la machine 'maître'?</li><h1><span class="show_niv">9</span>exec seulement si hote appelant = xxx</h1>
+<h1><span class="show_niv">10</span>fonctionnement</h1>
+<h2><span class="show_niv">10.1</span>detect shell</h2>
+<p>shell à uiliser</p><h2><span class="show_niv">10.2</span>dbus</h2>
+<h3><span class="show_niv">10.2.1</span>message quand ok ou failed</h3>
+<h4><span class="show_niv">10.2.1.1</span>ok</h4>
+<li>afficher ok apres t tries, s secondes</li><h4><span class="show_niv">10.2.1.2</span>failed</h4>
+<li>apres t tries, s secondes</li><li>code d'erreur interprété</li><li></li><h2><span class="show_niv">10.3</span>viewlog</h2>
+<li>par date</li><li>par soft</li><li></li><h2><span class="show_niv">10.4</span>injection de commandes ('y', etc...)</h2>
+<li>Nécessite donc 1 'enregistreur'?</li><li></li><h2><span class="show_niv">10.5</span>mode 'net'</h2>
+<p>Détection auto de connexion, attente auto de connexion, etc... si la commande a besoin du net.</p><p></p><h1><span class="show_niv">11</span>macro-commandes</h1>
+<p>Suite d'actions à lire dans fichier</p><li>avec tests</li><li>avec boucles et itérations</li><li></li><h2><span class="show_niv">11.1</span>editeur de macros</h2>
+<h3><span class="show_niv">11.1.1</span>FreeVision</h3>
+<h3><span class="show_niv">11.1.2</span>gtk2</h3>
+<h1><span class="show_niv">12</span>chroot</h1>
+<h1><span class="show_niv">13</span>waitfor</h1>
+<p>Attend qu'une condition soit remplie et execute</p><li>connexion internet</li><li>branchement d'un périphérique</li><li></li><h1><span class="show_niv">14</span>interrompre</h1>
+<h2><span class="show_niv">14.1</span>à date=d et heure=h</h2>
+<h2><span class="show_niv">14.2</span>après s secondes ou m minutes ou h heure ou j jour</h2>
+<h2><span class="show_niv">14.3</span>condition inverse à 'if' se passe entre temps</h2>
+<h1><span class="show_niv">15</span>daemon: alefad</h1>
+<h2><span class="show_niv">15.1</span>continue si mode reprise</h2>
+<h1><span class="show_niv">16</span>infinite</h1>
+<p>Toujours relancer quel que soit le résultat précédent.</p><p></p><h1><span class="show_niv">17</span>Interactive (-v)</h1>
+<p>View:</p><li>interactivité genre 'top' mais en 'mieux': utilisation de TVision (?)</li><li>Par exemple pour les commandes infinites + wait (renouvellement de la même commande à l'infini, type 'alefa -i -w 30 mailq' pour attendre qu'un mail soit envoyé): permet par exemple de selectionner une chaine (QueueID) et de quitter et/ou envoyer mail quand la chaine n'y est plus ;-)))</li><li>Voir modularité et ré-utilisabilité du code entre TVision et GTK (!!!)</li><li></li><h2><span class="show_niv">17.1</span>Commandes</h2>
+<h3><span class="show_niv">17.1.1</span>when (w)</h3>
+<p>quand...</p><h4><span class="show_niv">17.1.1.1</span>chaine n'est plus là</h4>
+<h4><span class="show_niv">17.1.1.2</span>chaine apparaît</h4>
+<h2><span class="show_niv">17.2</span>Actions possibles</h2>
+<h3><span class="show_niv">17.2.1</span>Quitter et arreter alefa</h3>
+<h3><span class="show_niv">17.2.2</span>Quitter et laisser alefa en tache de fond</h3>
+<h4><span class="show_niv">17.2.2.1</span>Commande de récupération type 'screen -x'</h4>
+<h3><span class="show_niv">17.2.3</span>envoyer mail</h3>
+<h3><span class="show_niv">17.2.4</span>commande personnalisée</h3>
+<h2><span class="show_niv">17.3</span>Sortie de logs</h2>
+<li>Genre tail, mais en plus évolué!).</li><li>Sortie de résultat de commande régulièrement lancée. (Exemple d'utilisation: backup-manager avec un df -h etc... pour voir si place disque ne va pas dépasser. Trouver un meilleur exemple) </li><h2><span class="show_niv">17.4</span>Alefa Manager</h2>
+<h3><span class="show_niv">17.4.1</span>gestion des 'alefa'</h3>
+<li>Voir les sorties des différents 'alefa' en cours</li><li>lancer de nouvelles commandes 'alefa'</li><li></li><h1><span class="show_niv">18</span>view -v[x] (PAS -v)</h1>
+<p>ve. Switch 'view' = formé par 2 caracteres.</p><li>-vt: view time</li><li></li><h1><span class="show_niv">19</span>galefa</h1>
+<h2><span class="show_niv">19.1</span>Memes fonctionnalités que la commande interactive (-v)</h2>
+<h1><span class="show_niv">20</span>Same command</h1>
+<p>Lancer la même commande sur plusieurs fichiers.</p><p></p>
+</body>
+</html>
+

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="9"/>
+    <General>
+      <Flags>
+        <LRSInOutputDirectory Value="False"/>
+      </Flags>
+      <MainUnit Value="0"/>
+      <UseAppBundle Value="False"/>
+    </General>
+    <i18n>
+      <EnableI18N Value="True"/>
+      <OutDir Value="i18n"/>
+    </i18n>
+    <VersionInfo>
+      <UseVersionInfo Value="True"/>
+      <AutoIncrementBuild Value="True"/>
+      <MinorVersionNr Value="1"/>
+      <BuildNr Value="8"/>
+      <StringTable CompanyName="Netsika" InternalName="alefa" ProductName="alefa" ProductVersion=""/>
+    </VersionInfo>
+    <BuildModes Count="1">
+      <Item1 Name="default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <DestinationDirectory Value="/home/thierry/work/devel/alefa"/>
+      <IgnoreBinaries Value="False"/>
+      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
+      <ExcludeFileFilter Value="*.(bak|ppu|ppw|o|so);*~;backup"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+        <CommandLineParams Value="-i -w 5 &quot;echo Mandeha tsara i alefa! Miandry 5s..&quot;"/>
+        <LaunchingApplication Use="True"/>
+      </local>
+    </RunParams>
+    <Units Count="17">
+      <Unit0>
+        <Filename Value="alefa.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="76"/>
+        <CursorPos X="26" Y="82"/>
+        <UsageCount Value="39"/>
+        <Bookmarks Count="1">
+          <Item0 Y="77"/>
+        </Bookmarks>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/packages/fcl-base/src/inc/custapp.pp"/>
+        <UnitName Value="CustApp"/>
+        <TopLine Value="231"/>
+        <CursorPos X="3" Y="239"/>
+        <UsageCount Value="18"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/sysutils/sysutilh.inc"/>
+        <TopLine Value="158"/>
+        <CursorPos X="14" Y="169"/>
+        <UsageCount Value="9"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/sysutils/sysutils.inc"/>
+        <TopLine Value="445"/>
+        <CursorPos X="3" Y="453"/>
+        <UsageCount Value="9"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/sysutils/osutilsh.inc"/>
+        <TopLine Value="13"/>
+        <CursorPos X="11" Y="25"/>
+        <UsageCount Value="12"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/unix/sysutils.pp"/>
+        <TopLine Value="886"/>
+        <CursorPos X="50" Y="883"/>
+        <UsageCount Value="18"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/unix/bunxh.inc"/>
+        <TopLine Value="50"/>
+        <CursorPos X="15" Y="61"/>
+        <UsageCount Value="9"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/linux/bunxsysc.inc"/>
+        <TopLine Value="373"/>
+        <CursorPos X="3" Y="376"/>
+        <UsageCount Value="9"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/sysutils/syswideh.inc"/>
+        <TopLine Value="11"/>
+        <CursorPos X="11" Y="21"/>
+        <UsageCount Value="18"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/sysutils/syswide.inc"/>
+        <TopLine Value="35"/>
+        <CursorPos Y="40"/>
+        <UsageCount Value="18"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/sysutils/sysstrh.inc"/>
+        <TopLine Value="219"/>
+        <CursorPos X="10" Y="230"/>
+        <UsageCount Value="18"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/sysutils/sysstr.inc"/>
+        <TopLine Value="541"/>
+        <CursorPos Y="541"/>
+        <UsageCount Value="18"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/sysutils/syspchh.inc"/>
+        <TopLine Value="14"/>
+        <CursorPos X="10" Y="25"/>
+        <UsageCount Value="18"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/x86_64/strings.inc"/>
+        <TopLine Value="12"/>
+        <CursorPos X="10" Y="12"/>
+        <UsageCount Value="18"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/inc/genstr.inc"/>
+        <TopLine Value="202"/>
+        <CursorPos X="9" Y="208"/>
+        <UsageCount Value="18"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/inc/stringsi.inc"/>
+        <TopLine Value="37"/>
+        <CursorPos X="10" Y="37"/>
+        <UsageCount Value="18"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/objpas.pp"/>
+        <TopLine Value="181"/>
+        <CursorPos Y="186"/>
+        <UsageCount Value="17"/>
+      </Unit16>
+    </Units>
+    <JumpHistory Count="6" HistoryIndex="5">
+      <Position1>
+        <Filename Value="alefa.lpr"/>
+        <Caret Line="76" Column="69" TopLine="69"/>
+      </Position1>
+      <Position2>
+        <Filename Value="alefa.lpr"/>
+        <Caret Line="50" Column="5" TopLine="36"/>
+      </Position2>
+      <Position3>
+        <Filename Value="alefa.lpr"/>
+        <Caret Line="76" Column="12" TopLine="62"/>
+      </Position3>
+      <Position4>
+        <Filename Value="alefa.lpr"/>
+        <Caret Line="159" Column="12" TopLine="144"/>
+      </Position4>
+      <Position5>
+        <Filename Value="alefa.lpr"/>
+        <Caret Line="165" Column="3" TopLine="163"/>
+      </Position5>
+      <Position6>
+        <Filename Value="alefa.lpr"/>
+        <Caret Line="71" Column="3" TopLine="56"/>
+      </Position6>
+    </JumpHistory>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <SearchPaths>
+      <UnitOutputDirectory Value="$(TargetCPU)/$(TargetOS)"/>
+    </SearchPaths>
+    <Parsing>
+      <SyntaxOptions>
+        <CStyleOperator Value="False"/>
+        <UseAnsiStrings Value="False"/>
+      </SyntaxOptions>
+    </Parsing>
+    <CodeGeneration>
+      <TargetOS Value="linux"/>
+    </CodeGeneration>
+    <Linking>
+      <Debugging>
+        <DebugInfoType Value="dsStabs"/>
+        <GenGProfCode Value="True"/>
+      </Debugging>
+    </Linking>
+    <Other>
+      <CreateMakefileOnBuild Value="True"/>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="2">
+      <Item1>
+        <Name Value="ECodetoolError"/>
+      </Item1>
+      <Item2>
+        <Name Value="EFOpenError"/>
+      </Item2>
+    </Exceptions>
+  </Debugging>
+</CONFIG>
