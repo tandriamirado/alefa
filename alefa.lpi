@@ -17,7 +17,7 @@
       <UseVersionInfo Value="True"/>
       <AutoIncrementBuild Value="True"/>
       <MinorVersionNr Value="1"/>
-      <BuildNr Value="16"/>
+      <BuildNr Value="17"/>
       <StringTable ProductVersion="0.1.0.2"/>
     </VersionInfo>
     <BuildModes Count="1">
@@ -32,7 +32,7 @@
     <RunParams>
       <local>
         <FormatVersion Value="1"/>
-        <LaunchingApplication Use="True" PathPlusParams="/usr/X11R6/bin/xterm -T 'Lazarus Run Output' -e $(LazarusDir)/tools/runwait.sh $(TargetCmdLine)"/>
+        <LaunchingApplication Use="True"/>
       </local>
     </RunParams>
     <Units Count="18">
@@ -40,9 +40,8 @@
         <Filename Value="alefa.lpr"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="41"/>
-        <CursorPos Y="52"/>
-        <UsageCount Value="37"/>
+        <TopLine Value="22"/>
+        <UsageCount Value="38"/>
         <Bookmarks Count="1">
           <Item0 Y="79"/>
         </Bookmarks>
@@ -155,7 +154,7 @@
         <UsageCount Value="10"/>
       </Unit17>
     </Units>
-    <JumpHistory Count="8" HistoryIndex="7">
+    <JumpHistory Count="9" HistoryIndex="8">
       <Position1>
         <Filename Value="alefa.lpr"/>
         <Caret Line="72" Column="39" TopLine="69"/>
@@ -187,6 +186,10 @@
         <Filename Value="alefa.lpr"/>
         <Caret Line="221" Column="35" TopLine="198"/>
       </Position8>
+      <Position9>
+        <Filename Value="alefa.lpr"/>
+        <Caret Line="80" TopLine="65"/>
+      </Position9>
     </JumpHistory>
   </ProjectOptions>
   <CompilerOptions>
