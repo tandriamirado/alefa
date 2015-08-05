@@ -5,6 +5,8 @@
 .SH NAME
 \fBalefa\fP - application launch helper
 
+"alefa" means "run", "go", "launch" or "execute" in malagasy language.
+
 .SH SYNOPSIS
 \fBalefa\fP 
 .RI [ OPTIONS ]...
@@ -14,7 +16,12 @@ Execute FILE. FILE has to be the last argument, after all the OPTIONs.
 
 .SH DESCRIPTION
 .PP
-\fBalefa\fP is for...
+\fBalefa\fP  is a command line utility that allows to control the launch and execution of other programs.
+For example it is often useful to have to write (more or less) simple scripts to rerun some commands until they "succeed", or to launch other commands indefinitely.
+
+There are numerous common use cases, yet it is always when we don't have the time nor the mood to type such scripts that we should. Such things should be easily automated so that we can do other tasks without being distracted and without having to restart such frustrating commands ourselves by hand.
+
+"alefa" fixes that. I decided to create it a day that I was tired of creating, modifying and adapting some scripts to make yet simple and routine tasks.
 
 .SH OPTIONS
 
@@ -23,7 +30,7 @@ Execute FILE. FILE has to be the last argument, after all the OPTIONs.
 Show the help screen.
 .TP
 \fB-i,  --infinite\fR
-Re-run until the end of time (or until [ctrl][c])
+Re-run until the end of time (or until interrupted by ctrl + c)
 .TP
 \fB-t,  --tries=NUMBER\fR
 Set number of retries to NUMBER (0 unlimits).
@@ -37,8 +44,33 @@ Wait SECONDS seconds between retries.
 \fB-x,  --exitcode\fR
 Show exitcode. Can be useful for testing purposes.
 
-.SH BUGS
-Report bugs to <thierry.andriamirado@free.fr>
+.SH INTERRUPT
+As usual, you can interrupt \fBalefa\fR with \fBctrl + c\fR
 
 .SH EXAMPLE
+Examples abound:
 
+
+* Try to connect over ssh to a server currently rebooting somewhere in the world, every 5 seconds until it succeeds. In case of connection loss, try again automatically every 5 seconds. When you leave yourself the ssh session by typing "exit", "Alefa" also will stop its attempts and you will return to the prompt.
+
+
+* Automatically restart a program (command line or graphical app) who crashes regularly
+
+
+* Regularly check the available disk space during a long copy of huge files etc ..
+
+.SH BUGS
+Feel free to make suggestions based on your daily needs.
+Report bugs to <thierry.andriamirado@netsika.net>
+
+.SH AUTHOR
+\fBThierry Andriamirado\fR <thierry.andriamirado@netsika.net>
+
+.SH COPYRIGHT
+Copyright 2008-2015 Thierry Andriamirado.
+
+This manual page is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+This manual page is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
