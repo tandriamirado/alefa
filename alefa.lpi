@@ -20,6 +20,79 @@
       <BuildNr Value="17"/>
       <StringTable ProductVersion="0.1.0.2"/>
     </VersionInfo>
+    <CustomData Count="13">
+      <Item0 Name="lazpackager/copyright" Value="2015 Thierry Andriamirado"/>
+      <Item1 Name="lazpackager/deb/ppa" Value="ppa:thierry.andriamirado/alefa"/>
+      <Item2 Name="lazpackager/deb/series" Value="vivid"/>
+      <Item3 Name="lazpackager/deb/tpl_changelog" Value="?PACKAGE_NAME? (?FULLVERSION?) ?SERIES?; urgency=low
+
+  * Original version ?VERSION? packaged with lazdebian
+
+ -- ?MAINTAINER? &lt;?MAINTAINER_EMAIL?>  ?DATER?
+"/>
+      <Item4 Name="lazpackager/deb/tpl_control" Value="Source: ?PACKAGE_NAME?
+Maintainer: ?MAINTAINER? &lt;?MAINTAINER_EMAIL?>
+Section: misc
+Priority: optional
+Standards-Version: 3.9.3
+Build-Depends: fpc, lazarus, lcl, lcl-utils, debhelper (>= 8)
+
+Package: ?PACKAGE_NAME?
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+Description: ?DESCRIPTION?
+ ?DESCRIPTION_LONG?
+"/>
+      <Item5 Name="lazpackager/deb/tpl_copyright" Value="Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+
+Files: *
+Copyright: ?COPYRIGHT?
+License: GPL-2+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License along
+ with this program; if not, write to the Free Software Foundation, Inc.,
+ 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ .
+ On Debian systems, the full text of the GNU General Public
+ License version 2 can be found in the file
+ /usr/share/common-licenses/GPL-2
+"/>
+      <Item6 Name="lazpackager/deb/tpl_rules" Value="#!/usr/bin/make -f
+
+ROOT = $(CURDIR)/debian/?PACKAGE_NAME?
+
+override_dh_auto_clean:
+	$(RM) -r lib
+	$(RM) lib *.res ?EXECUTABLE?
+
+override_dh_auto_build:
+	lazbuild ?PROJECT?
+
+override_dh_auto_install:
+	install -d -m 755 $(ROOT)/usr/bin
+	install -s -m 755 ?EXECUTABLE? $(ROOT)/usr/bin
+
+%:
+	dh $@
+"/>
+      <Item7 Name="lazpackager/description" Value="&quot;alefa&quot; is a command line utility that allows to control the launch and execution of other programs."/>
+      <Item8 Name="lazpackager/description_long" Value="&quot;alefa&quot; is a command line utility that allows to control the launch and execution of other programs. For example it is often useful to have to write (more or less) simple scripts to rerun some commands until they &quot;succeed&quot;, or to launch other commands indefinitely. There are numerous common use cases, yet it is always when we don't have the time nor the mood to type such scripts that we should. Such things should be easily automated so that we can do other tasks without being distracted and without having to restart such frustrating commands ourselves by hand. &quot;alefa&quot; fixes that. I decided to create it a day that I was tired of creating, modifying and adapting some scripts to make yet simple and routine tasks."/>
+      <Item9 Name="lazpackager/export_cmd" Value="?CP? *.lpi ?TEMPFOLDER?/
+?CP? *.lpr ?TEMPFOLDER?/
+"/>
+      <Item10 Name="lazpackager/maintainer" Value="Thierry Andriamirado"/>
+      <Item11 Name="lazpackager/maintainer_email" Value="thierry.andriamirado@netsika.net"/>
+      <Item12 Name="lazpackager/package_name" Value="alefa"/>
+    </CustomData>
     <BuildModes Count="1">
       <Item1 Name="default" Default="True"/>
     </BuildModes>
@@ -35,13 +108,12 @@
         <LaunchingApplication Use="True"/>
       </local>
     </RunParams>
-    <Units Count="18">
+    <Units Count="22">
       <Unit0>
         <Filename Value="alefa.lpr"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="22"/>
-        <UsageCount Value="38"/>
+        <UsageCount Value="53"/>
         <Bookmarks Count="1">
           <Item0 Y="79"/>
         </Bookmarks>
@@ -53,97 +125,97 @@
         <UnitName Value="CustApp"/>
         <TopLine Value="231"/>
         <CursorPos X="3" Y="239"/>
-        <UsageCount Value="18"/>
+        <UsageCount Value="17"/>
       </Unit1>
       <Unit2>
         <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/sysutils/sysutilh.inc"/>
         <TopLine Value="158"/>
         <CursorPos X="14" Y="169"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit2>
       <Unit3>
         <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/sysutils/sysutils.inc"/>
         <TopLine Value="445"/>
         <CursorPos X="3" Y="453"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit3>
       <Unit4>
         <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/sysutils/osutilsh.inc"/>
         <TopLine Value="13"/>
         <CursorPos X="11" Y="25"/>
-        <UsageCount Value="12"/>
+        <UsageCount Value="11"/>
       </Unit4>
       <Unit5>
         <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/unix/sysutils.pp"/>
         <TopLine Value="886"/>
         <CursorPos X="50" Y="883"/>
-        <UsageCount Value="18"/>
+        <UsageCount Value="17"/>
       </Unit5>
       <Unit6>
         <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/unix/bunxh.inc"/>
         <TopLine Value="50"/>
         <CursorPos X="15" Y="61"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit6>
       <Unit7>
         <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/linux/bunxsysc.inc"/>
         <TopLine Value="373"/>
         <CursorPos X="3" Y="376"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit7>
       <Unit8>
         <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/sysutils/syswideh.inc"/>
         <TopLine Value="11"/>
         <CursorPos X="11" Y="21"/>
-        <UsageCount Value="18"/>
+        <UsageCount Value="17"/>
       </Unit8>
       <Unit9>
         <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/sysutils/syswide.inc"/>
         <TopLine Value="35"/>
         <CursorPos Y="40"/>
-        <UsageCount Value="18"/>
+        <UsageCount Value="17"/>
       </Unit9>
       <Unit10>
         <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/sysutils/sysstrh.inc"/>
         <TopLine Value="219"/>
         <CursorPos X="10" Y="230"/>
-        <UsageCount Value="18"/>
+        <UsageCount Value="17"/>
       </Unit10>
       <Unit11>
         <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/sysutils/sysstr.inc"/>
         <TopLine Value="541"/>
         <CursorPos Y="541"/>
-        <UsageCount Value="18"/>
+        <UsageCount Value="17"/>
       </Unit11>
       <Unit12>
         <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/sysutils/syspchh.inc"/>
         <TopLine Value="14"/>
         <CursorPos X="10" Y="25"/>
-        <UsageCount Value="18"/>
+        <UsageCount Value="17"/>
       </Unit12>
       <Unit13>
         <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/x86_64/strings.inc"/>
         <TopLine Value="12"/>
         <CursorPos X="10" Y="12"/>
-        <UsageCount Value="18"/>
+        <UsageCount Value="17"/>
       </Unit13>
       <Unit14>
         <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/inc/genstr.inc"/>
         <TopLine Value="202"/>
         <CursorPos X="9" Y="208"/>
-        <UsageCount Value="18"/>
+        <UsageCount Value="17"/>
       </Unit14>
       <Unit15>
         <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/inc/stringsi.inc"/>
         <TopLine Value="37"/>
         <CursorPos X="10" Y="37"/>
-        <UsageCount Value="18"/>
+        <UsageCount Value="17"/>
       </Unit15>
       <Unit16>
         <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/objpas.pp"/>
         <TopLine Value="181"/>
         <CursorPos Y="186"/>
-        <UsageCount Value="17"/>
+        <UsageCount Value="16"/>
       </Unit16>
       <Unit17>
         <Filename Value="/usr/local/src/svn/lazarus/trunk/ide/lazarus.pp"/>
@@ -151,8 +223,39 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="108"/>
         <CursorPos Y="130"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit17>
+      <Unit18>
+        <Filename Value="../components/3dparties/LazPackager/lazpackagerbase.pas"/>
+        <UnitName Value="LazPackagerBase"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="260"/>
+        <CursorPos X="32" Y="266"/>
+        <UsageCount Value="11"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="../git_forks/LazPackager/lazpackagerbase.pas"/>
+        <UnitName Value="LazPackagerBase"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="264"/>
+        <CursorPos Y="269"/>
+        <UsageCount Value="9"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="/usr/share/lazarus/1.4.2/components/ideintf/ideexterntoolintf.pas"/>
+        <UnitName Value="IDEExternToolIntf"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="641"/>
+        <CursorPos X="25" Y="649"/>
+        <UsageCount Value="9"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="DEBUILD.sh"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos Y="4"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Bash"/>
+      </Unit21>
     </Units>
     <JumpHistory Count="9" HistoryIndex="8">
       <Position1>
