@@ -12,33 +12,41 @@ Such things should be easily automated so that we can do other tasks without bei
 
 Synopsys
 ========
-alefa [OPTION]... FILE
-      Execute FILE. FILE has to be the last argument, after all the OPTIONs.
+>**alefa** [OPTION]... FILE
 
-alefa [OPTION]... "FILE [--OPTIONS]"
-      Execute FILE with its OPTIONS. FILE has to be the last argument, after all the OPTIONs. Note the double quotes enclosing the executable file and its parameters.
+Execute FILE. FILE has to be the last argument, after all the OPTIONs.
+
+>**alefa** [OPTION]... "FILE [--OPTIONS]"
+
+Execute FILE with its OPTIONS. FILE has to be the last argument, after all the OPTIONs. Note the double quotes enclosing the executable file and its parameters.
 
 Mandatory arguments to long options are mandatory for short options too.
 
 Options
 =======
-       **-h,  --help**
-              Show the help screen.
+**-h,  --help**
 
-       **-i,  --infinite**
-              Re-run until the end of time (or until interrupted by ctrl + c)
+Show the help screen.
 
-       **-t,  --tries=NUMBER**
-              Set number of retries to NUMBER (0 unlimits).
+**-i,  --infinite**
 
-       **-u,  --unlimits**
-              Tries until exit code = 0 (equiv: --tries=0).
+Re-run until the end of time (or until interrupted by ctrl + c)
 
-       **-w,  --wait=SECONDS**
-              Wait SECONDS seconds between retries. Default: 1 second.
+**-t,  --tries=NUMBER**
 
-       **-x,  --exitcode**
-              Show exitcode. Can be useful for testing purposes.
+Set number of retries to NUMBER (0 unlimits).
+
+**-u,  --unlimits**
+
+Tries until exit code = 0 (equiv: --tries=0).
+
+**-w,  --wait=SECONDS**
+
+Wait SECONDS seconds between retries. Default: 1 second.
+
+**-x,  --exitcode**
+
+Show exitcode. Can be useful for testing purposes.
 
 Interrupt
 =========
