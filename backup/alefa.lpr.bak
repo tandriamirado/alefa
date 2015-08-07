@@ -203,7 +203,6 @@ begin
   WriteLn('');
   writeln('Type "man alefa" for the complete manual page');
   WriteLn('--');
-
 //  WriteLn('Report bugs to <' + authorMail + '>');
   WriteLn('Report bugs to ' + authorTwitter);
 

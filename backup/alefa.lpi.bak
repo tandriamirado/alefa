@@ -17,7 +17,7 @@
       <UseVersionInfo Value="True"/>
       <AutoIncrementBuild Value="True"/>
       <MinorVersionNr Value="1"/>
-      <BuildNr Value="20"/>
+      <BuildNr Value="21"/>
       <StringTable CompanyName="Netsika" FileDescription="Allows to control the launch/execution of other programs" LegalCopyright="(c) 2015 Thierry Andriamirado &lt;thierry.andriamirado@netsika.net>" ProductName="alefa" ProductVersion="0.1.0.2"/>
     </VersionInfo>
     <CustomData Count="13">
@@ -32,7 +32,7 @@
 "/>
       <Item4 Name="lazpackager/deb/tpl_control" Value="Source: ?PACKAGE_NAME?
 Maintainer: ?MAINTAINER? &lt;?MAINTAINER_EMAIL?>
-Section: Utilities
+Section: utilities
 Priority: optional
 Standards-Version: 3.9.3
 Build-Depends: fpc, lazarus, lcl, lcl-utils, debhelper (>= 8)
@@ -119,8 +119,8 @@ override_dh_auto_install:
         <Filename Value="alefa.lpr"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="216"/>
-        <CursorPos X="18" Y="223"/>
+        <TopLine Value="198"/>
+        <CursorPos X="17" Y="205"/>
         <UsageCount Value="82"/>
         <Bookmarks Count="1">
           <Item0 Y="79"/>
@@ -391,7 +391,7 @@ override_dh_auto_install:
         <EditorIndex Value="2"/>
         <TopLine Value="4"/>
         <CursorPos Y="21"/>
-        <UsageCount Value="29"/>
+        <UsageCount Value="30"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit36>
