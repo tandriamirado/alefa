@@ -182,7 +182,7 @@ procedure TAlefa.WriteHelp;
 begin
   { add your help code here }
   writeln('Alefa, application launch helper');
-  writeln('Copyright (c) 2009 by Thierry Andriamirado');
+  writeln('Copyright (c) 2015 by Thierry Andriamirado');
   WriteLn('');
   writeln('Usage: ', ExtractFileName(ExeName),' [OPTION]... FILE');
   WriteLn('Execute FILE. FILE has to be the last argument, after all the OPTIONs.');
@@ -206,7 +206,7 @@ end;
 procedure TAlefa.ShowUsage;
 begin
   writeln('Alefa, application launch helper');
-  writeln('Copyright (c) 2008 by Thierry Andriamirado');
+  writeln('Copyright (c) 2015 by Thierry Andriamirado');
   WriteLn('');
   writeln('Usage: ', ExtractFileName(ExeName),' [OPTION]... FILE');
   WriteLn('Execute FILE. FILE has to be the last argument, after all the OPTIONs.');

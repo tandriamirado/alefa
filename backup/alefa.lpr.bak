@@ -2,7 +2,7 @@ program alefa;
 
 { <description>
 
-  Copyright (C) 2008 Thierry Andriamirado <thierry.andriamirado@netsika.net>
+  Copyright (C) 2015 Thierry Andriamirado <thierry.andriamirado@netsika.net>
 
   This source is free software; you can redistribute it and/or modify it under
   the terms of the GNU General Public License as published by the Free
@@ -72,12 +72,8 @@ var
 begin
   nbTries := 0;
   if optInfinite then nbEndStr := 'Infinite' else nbEndStr := IntToStr(optTries) +':';
-//  appToRun.
-  //procExec.CommandLine := appToRun;
   procExec.CommandLine := 'sh -c "' + appToRun +'"';
   
-//  ExecuteProcess(appToRun,'');
-
   repeat
     if nbTries > 0 then begin
        Sleep(optWait);
@@ -134,8 +130,7 @@ begin
   initAlefa;
   // quick check parameters
   ErrorMsg:=CheckOptions('h i x t: u w::','help infinite exitcode tries: unlimits wait::');
-//  ErrorMsg:=CheckOptions('t','tries');
-  
+
   if ErrorMsg<>'' then begin
     WriteHelp;
     writeln('');

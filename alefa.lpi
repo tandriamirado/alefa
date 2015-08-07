@@ -17,7 +17,7 @@
       <UseVersionInfo Value="True"/>
       <AutoIncrementBuild Value="True"/>
       <MinorVersionNr Value="1"/>
-      <BuildNr Value="21"/>
+      <BuildNr Value="22"/>
       <StringTable CompanyName="Netsika" FileDescription="Allows to control the launch/execution of other programs" LegalCopyright="(c) 2015 Thierry Andriamirado &lt;thierry.andriamirado@netsika.net>" ProductName="alefa" ProductVersion="0.1.0.2"/>
     </VersionInfo>
     <CustomData Count="13">
@@ -120,13 +120,12 @@ override_dh_auto_install:
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
         <TopLine Value="224"/>
-        <CursorPos Y="133"/>
+        <CursorPos X="30" Y="209"/>
         <UsageCount Value="85"/>
         <Bookmarks Count="1">
           <Item0 Y="77"/>
         </Bookmarks>
         <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit0>
       <Unit1>
         <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/packages/fcl-base/src/inc/custapp.pp"/>
@@ -371,7 +370,7 @@ override_dh_auto_install:
         <EditorIndex Value="5"/>
         <TopLine Value="16"/>
         <CursorPos Y="28"/>
-        <UsageCount Value="34"/>
+        <UsageCount Value="35"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit34>
@@ -390,7 +389,7 @@ override_dh_auto_install:
         <EditorIndex Value="4"/>
         <TopLine Value="12"/>
         <CursorPos Y="21"/>
-        <UsageCount Value="32"/>
+        <UsageCount Value="33"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit36>
