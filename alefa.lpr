@@ -2,7 +2,7 @@ program alefa;
 
 { <description>
 
-  Copyright (C) 2008 Thierry Andriamirado <thierry_andriamirado@yahoo.fr>
+  Copyright (C) 2008 Thierry Andriamirado <thierry.andriamirado@netsika.net>
 
   This source is free software; you can redistribute it and/or modify it under
   the terms of the GNU General Public License as published by the Free
@@ -32,7 +32,7 @@ uses
   process;
 
 const
-  authorMail = 'thierry_andriamirado@yahoo.fr';
+  authorMail = 'thierry.andriamirado@netsika.net';
   authorTwitter = 'http://twitter.com/tandriamirado';
   
 type
@@ -81,7 +81,7 @@ begin
   repeat
     if nbTries > 0 then begin
        Sleep(optWait);
-       writeln('Try #' + IntToStr(nbTries + 1) + '/' + nbEndStr);
+       writeln('-- Try #' + IntToStr(nbTries + 1) + '/' + nbEndStr + ':');
     end;
     procExec.Active := true;           // go!
     nbTries := nbTries + 1;
@@ -201,6 +201,8 @@ begin
   WriteLn('  -w,  --wait=SECONDS       wait SECONDS between retries.');
   WriteLn('  -x,  --exitcode           show exitcode. Can be useful for testing purposes.');
   WriteLn('');
+  writeln('Type "man alefa" for the complete manual page');
+  WriteLn('--');
 //  WriteLn('Report bugs to <' + authorMail + '>');
   WriteLn('Report bugs to ' + authorTwitter);
 
@@ -214,9 +216,15 @@ begin
   writeln('Usage: ', ExtractFileName(ExeName),' [OPTION]... FILE');
   WriteLn('Execute FILE. FILE has to be the last argument, after all the OPTIONs.');
   WriteLn('');
-  WriteLn('Mandatory arguments to long options are mandatory for short options too.');
+  writeln('Usage #2: ', ExtractFileName(ExeName),' [OPTION]... "FILE [--OPTIONS]"');
+  WriteLn('Execute FILE with its OPTIONS. FILE has to be the last argument, after all the OPTIONs. Note the double quotes enclosing the executable file and its parameters.');
   WriteLn('');
-//  WriteLn('Report bugs to <' + authorMail + '>');
+  WriteLn('Mandatory arguments to long options are mandatory for short options too.');
+  WriteLn('--');
+  writeln('Type "alefa --help" for help');
+  writeln('Type "man alefa" for the complete manual page');
+  WriteLn('--');
+ //  WriteLn('Report bugs to <' + authorMail + '>');
   WriteLn('Report bugs to ' + authorTwitter);
 
 end;
@@ -227,6 +235,8 @@ var
 {$IFDEF WINDOWS}{$R project1.rc}{$ENDIF}
 
 {$IFDEF WINDOWS}{$R alefa.rc}{$ENDIF}
+
+{$R *.res}
 
 begin
   Application:=TAlefa.Create(nil);

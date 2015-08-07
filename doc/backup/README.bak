@@ -17,8 +17,7 @@ alefa [OPTION]... FILE
 
 alefa [OPTION]... "FILE [--OPTIONS]"
       Execute FILE with its OPTIONS. FILE has to be the last argument, after all the OPTIONs. Note the double quotes enclosing the executable file and its parameters.
-
-Mandatory arguments to long options are mandatory for short options too.
+      Mandatory arguments to long options are mandatory for short options too.
 
 Options
 =======

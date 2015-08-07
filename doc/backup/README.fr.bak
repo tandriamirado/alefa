@@ -16,8 +16,7 @@ alefa [OPTION]... FICHIER
 
 alefa [OPTION]... "FICHIER [--OPTIONS]"
       Execute FICHIER avec ses OPTIONS. FICHIER doit être le dernier argument, après toutes les OPTIONs d'alefa. Notez les guillemets englobant le fichier exécutable à lancer et ses options.
-
-Les arguments obligatoires aux options longues le sont aussi pour les options courtes.
+      Les arguments obligatoires aux options longues le sont aussi pour les options courtes.
 
 Options
 =======

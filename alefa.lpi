@@ -17,8 +17,8 @@
       <UseVersionInfo Value="True"/>
       <AutoIncrementBuild Value="True"/>
       <MinorVersionNr Value="1"/>
-      <BuildNr Value="17"/>
-      <StringTable ProductVersion="0.1.0.2"/>
+      <BuildNr Value="21"/>
+      <StringTable CompanyName="Netsika" FileDescription="Allows to control the launch/execution of other programs" LegalCopyright="(c) 2015 Thierry Andriamirado &lt;thierry.andriamirado@netsika.net>" ProductName="alefa" ProductVersion="0.1.0.2"/>
     </VersionInfo>
     <CustomData Count="13">
       <Item0 Name="lazpackager/copyright" Value="2015 Thierry Andriamirado"/>
@@ -26,13 +26,13 @@
       <Item2 Name="lazpackager/deb/series" Value="vivid"/>
       <Item3 Name="lazpackager/deb/tpl_changelog" Value="?PACKAGE_NAME? (?FULLVERSION?) ?SERIES?; urgency=low
 
-  * Original version ?VERSION? packaged with lazdebian
+  * Original published version (on github) ?VERSION? packaged with lazpackager
 
  -- ?MAINTAINER? &lt;?MAINTAINER_EMAIL?>  ?DATER?
 "/>
       <Item4 Name="lazpackager/deb/tpl_control" Value="Source: ?PACKAGE_NAME?
 Maintainer: ?MAINTAINER? &lt;?MAINTAINER_EMAIL?>
-Section: misc
+Section: utilities
 Priority: optional
 Standards-Version: 3.9.3
 Build-Depends: fpc, lazarus, lcl, lcl-utils, debhelper (>= 8)
@@ -80,14 +80,20 @@ override_dh_auto_build:
 override_dh_auto_install:
 	install -d -m 755 $(ROOT)/usr/bin
 	install -s -m 755 ?EXECUTABLE? $(ROOT)/usr/bin
+	dh_installdocs README*
+	dh_installman alefa.1
 
 %:
 	dh $@
 "/>
-      <Item7 Name="lazpackager/description" Value="&quot;alefa&quot; is a command line utility that allows to control the launch and execution of other programs."/>
-      <Item8 Name="lazpackager/description_long" Value="&quot;alefa&quot; is a command line utility that allows to control the launch and execution of other programs. For example it is often useful to have to write (more or less) simple scripts to rerun some commands until they &quot;succeed&quot;, or to launch other commands indefinitely. There are numerous common use cases, yet it is always when we don't have the time nor the mood to type such scripts that we should. Such things should be easily automated so that we can do other tasks without being distracted and without having to restart such frustrating commands ourselves by hand. &quot;alefa&quot; fixes that. I decided to create it a day that I was tired of creating, modifying and adapting some scripts to make yet simple and routine tasks."/>
+      <Item7 Name="lazpackager/description" Value="Allows to control the launch/execution of other programs"/>
+      <Item8 Name="lazpackager/description_long" Value="It is often useful to write (more or less) simple scripts to rerun some commands until they &quot;succeed&quot;, or to launch other commands indefinitely. There are numerous common use cases.
+ Such things should be easily automated so that we can do other tasks without being distracted and without having to restart such frustrating commands ourselves by hand: without creating scripts!
+ &quot;alefa&quot; fixes that. I decided to create it a day that I was tired of creating, modifying and adapting such scripts to make yet simple and routine tasks."/>
       <Item9 Name="lazpackager/export_cmd" Value="?CP? *.lpi ?TEMPFOLDER?/
 ?CP? *.lpr ?TEMPFOLDER?/
+?CP? doc/README* ?TEMPFOLDER?/
+?CP? doc/*.1 ?TEMPFOLDER?/
 "/>
       <Item10 Name="lazpackager/maintainer" Value="Thierry Andriamirado"/>
       <Item11 Name="lazpackager/maintainer_email" Value="thierry.andriamirado@netsika.net"/>
@@ -108,12 +114,14 @@ override_dh_auto_install:
         <LaunchingApplication Use="True"/>
       </local>
     </RunParams>
-    <Units Count="22">
+    <Units Count="37">
       <Unit0>
         <Filename Value="alefa.lpr"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
-        <UsageCount Value="53"/>
+        <TopLine Value="198"/>
+        <CursorPos X="17" Y="205"/>
+        <UsageCount Value="82"/>
         <Bookmarks Count="1">
           <Item0 Y="79"/>
         </Bookmarks>
@@ -125,97 +133,97 @@ override_dh_auto_install:
         <UnitName Value="CustApp"/>
         <TopLine Value="231"/>
         <CursorPos X="3" Y="239"/>
-        <UsageCount Value="17"/>
+        <UsageCount Value="14"/>
       </Unit1>
       <Unit2>
         <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/sysutils/sysutilh.inc"/>
         <TopLine Value="158"/>
         <CursorPos X="14" Y="169"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="5"/>
       </Unit2>
       <Unit3>
         <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/sysutils/sysutils.inc"/>
         <TopLine Value="445"/>
         <CursorPos X="3" Y="453"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="5"/>
       </Unit3>
       <Unit4>
         <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/sysutils/osutilsh.inc"/>
         <TopLine Value="13"/>
         <CursorPos X="11" Y="25"/>
-        <UsageCount Value="11"/>
+        <UsageCount Value="8"/>
       </Unit4>
       <Unit5>
         <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/unix/sysutils.pp"/>
         <TopLine Value="886"/>
         <CursorPos X="50" Y="883"/>
-        <UsageCount Value="17"/>
+        <UsageCount Value="14"/>
       </Unit5>
       <Unit6>
         <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/unix/bunxh.inc"/>
         <TopLine Value="50"/>
         <CursorPos X="15" Y="61"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="5"/>
       </Unit6>
       <Unit7>
         <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/linux/bunxsysc.inc"/>
         <TopLine Value="373"/>
         <CursorPos X="3" Y="376"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="5"/>
       </Unit7>
       <Unit8>
         <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/sysutils/syswideh.inc"/>
         <TopLine Value="11"/>
         <CursorPos X="11" Y="21"/>
-        <UsageCount Value="17"/>
+        <UsageCount Value="14"/>
       </Unit8>
       <Unit9>
         <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/sysutils/syswide.inc"/>
         <TopLine Value="35"/>
         <CursorPos Y="40"/>
-        <UsageCount Value="17"/>
+        <UsageCount Value="14"/>
       </Unit9>
       <Unit10>
         <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/sysutils/sysstrh.inc"/>
         <TopLine Value="219"/>
         <CursorPos X="10" Y="230"/>
-        <UsageCount Value="17"/>
+        <UsageCount Value="14"/>
       </Unit10>
       <Unit11>
         <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/sysutils/sysstr.inc"/>
         <TopLine Value="541"/>
         <CursorPos Y="541"/>
-        <UsageCount Value="17"/>
+        <UsageCount Value="14"/>
       </Unit11>
       <Unit12>
         <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/sysutils/syspchh.inc"/>
         <TopLine Value="14"/>
         <CursorPos X="10" Y="25"/>
-        <UsageCount Value="17"/>
+        <UsageCount Value="14"/>
       </Unit12>
       <Unit13>
         <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/x86_64/strings.inc"/>
         <TopLine Value="12"/>
         <CursorPos X="10" Y="12"/>
-        <UsageCount Value="17"/>
+        <UsageCount Value="14"/>
       </Unit13>
       <Unit14>
         <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/inc/genstr.inc"/>
         <TopLine Value="202"/>
         <CursorPos X="9" Y="208"/>
-        <UsageCount Value="17"/>
+        <UsageCount Value="14"/>
       </Unit14>
       <Unit15>
         <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/inc/stringsi.inc"/>
         <TopLine Value="37"/>
         <CursorPos X="10" Y="37"/>
-        <UsageCount Value="17"/>
+        <UsageCount Value="14"/>
       </Unit15>
       <Unit16>
         <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/objpas.pp"/>
         <TopLine Value="181"/>
         <CursorPos Y="186"/>
-        <UsageCount Value="16"/>
+        <UsageCount Value="13"/>
       </Unit16>
       <Unit17>
         <Filename Value="/usr/local/src/svn/lazarus/trunk/ide/lazarus.pp"/>
@@ -223,7 +231,7 @@ override_dh_auto_install:
         <EditorIndex Value="-1"/>
         <TopLine Value="108"/>
         <CursorPos Y="130"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="6"/>
       </Unit17>
       <Unit18>
         <Filename Value="../components/3dparties/LazPackager/lazpackagerbase.pas"/>
@@ -231,33 +239,164 @@ override_dh_auto_install:
         <EditorIndex Value="-1"/>
         <TopLine Value="260"/>
         <CursorPos X="32" Y="266"/>
-        <UsageCount Value="11"/>
+        <UsageCount Value="8"/>
       </Unit18>
       <Unit19>
         <Filename Value="../git_forks/LazPackager/lazpackagerbase.pas"/>
         <UnitName Value="LazPackagerBase"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="264"/>
-        <CursorPos Y="269"/>
-        <UsageCount Value="9"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="44"/>
+        <CursorPos X="3" Y="50"/>
+        <UsageCount Value="25"/>
+        <Loaded Value="True"/>
       </Unit19>
       <Unit20>
         <Filename Value="/usr/share/lazarus/1.4.2/components/ideintf/ideexterntoolintf.pas"/>
         <UnitName Value="IDEExternToolIntf"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="641"/>
-        <CursorPos X="25" Y="649"/>
-        <UsageCount Value="9"/>
+        <TopLine Value="2405"/>
+        <CursorPos X="17" Y="675"/>
+        <UsageCount Value="7"/>
       </Unit20>
       <Unit21>
         <Filename Value="DEBUILD.sh"/>
         <EditorIndex Value="-1"/>
         <CursorPos Y="4"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="7"/>
         <DefaultSyntaxHighlighter Value="Bash"/>
       </Unit21>
+      <Unit22>
+        <Filename Value="../git_forks/LazPackager/lazpackagerdebian.pas"/>
+        <UnitName Value="LazPackagerDebian"/>
+        <EditorIndex Value="7"/>
+        <TopLine Value="220"/>
+        <CursorPos X="56" Y="188"/>
+        <UsageCount Value="23"/>
+        <Loaded Value="True"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="../git_forks/LazPackager/frmlazpackagerpreview.pas"/>
+        <UnitName Value="frmLazPackagerPreview"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="7"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="../git_forks/LazPackager/lazpackagermain.pas"/>
+        <UnitName Value="LazPackagerMain"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="25"/>
+        <CursorPos X="17" Y="60"/>
+        <UsageCount Value="7"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="../git_forks/LazPackager/frmlazpackageroptionsdeb.pas"/>
+        <ComponentName Value="FDebianOptions"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="frmLazPackagerOptionsDeb"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="169"/>
+        <CursorPos X="6" Y="169"/>
+        <UsageCount Value="7"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="/usr/share/fpcsrc/2.6.4/rtl/objpas/sysutils/sysstrh.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="209"/>
+        <CursorPos X="10" Y="218"/>
+        <UsageCount Value="7"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="/usr/share/lazarus/1.4.2/lcl/forms.pp"/>
+        <UnitName Value="Forms"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1395"/>
+        <CursorPos X="15" Y="1402"/>
+        <UsageCount Value="7"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="/usr/share/lazarus/1.4.2/lcl/include/application.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2225"/>
+        <CursorPos X="3" Y="2214"/>
+        <UsageCount Value="7"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="/usr/share/fpcsrc/2.6.4/rtl/objpas/sysutils/finah.inc"/>
+        <EditorIndex Value="8"/>
+        <TopLine Value="10"/>
+        <CursorPos X="10" Y="42"/>
+        <UsageCount Value="23"/>
+        <Loaded Value="True"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="/usr/share/fpcsrc/2.6.4/rtl/objpas/sysutils/fina.inc"/>
+        <EditorIndex Value="9"/>
+        <TopLine Value="396"/>
+        <CursorPos X="28" Y="410"/>
+        <UsageCount Value="23"/>
+        <Loaded Value="True"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="doc/README"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="7"/>
+        <CursorPos X="72" Y="21"/>
+        <UsageCount Value="46"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="doc/README.fr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="6"/>
+        <CursorPos X="2" Y="20"/>
+        <UsageCount Value="46"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit32>
+      <Unit33>
+        <Filename Value="doc/alefa.man"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="34"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit33>
+      <Unit34>
+        <Filename Value="doc/alefa.1"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="16"/>
+        <CursorPos Y="28"/>
+        <UsageCount Value="31"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit34>
+      <Unit35>
+        <Filename Value=".gitignore"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="1"/>
+        <CursorPos Y="7"/>
+        <UsageCount Value="30"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit35>
+      <Unit36>
+        <Filename Value="README.md"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="4"/>
+        <CursorPos Y="21"/>
+        <UsageCount Value="30"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit36>
     </Units>
-    <JumpHistory Count="9" HistoryIndex="8">
+    <JumpHistory Count="26" HistoryIndex="25">
       <Position1>
         <Filename Value="alefa.lpr"/>
         <Caret Line="72" Column="39" TopLine="69"/>
@@ -293,6 +432,73 @@ override_dh_auto_install:
         <Filename Value="alefa.lpr"/>
         <Caret Line="80" TopLine="65"/>
       </Position9>
+      <Position10>
+        <Filename Value="../git_forks/LazPackager/lazpackagerbase.pas"/>
+        <Caret Line="163" Column="10" TopLine="160"/>
+      </Position10>
+      <Position11>
+        <Filename Value="../git_forks/LazPackager/lazpackagerbase.pas"/>
+        <Caret Line="274" Column="12" TopLine="269"/>
+      </Position11>
+      <Position12>
+        <Filename Value="../git_forks/LazPackager/lazpackagerbase.pas"/>
+        <Caret Line="95" Column="15" TopLine="82"/>
+      </Position12>
+      <Position13>
+        <Filename Value="../git_forks/LazPackager/lazpackagerbase.pas"/>
+        <Caret Line="274" Column="14" TopLine="266"/>
+      </Position13>
+      <Position14>
+        <Filename Value="../git_forks/LazPackager/lazpackagerbase.pas"/>
+        <Caret Line="276" Column="18" TopLine="266"/>
+      </Position14>
+      <Position15>
+        <Filename Value="../git_forks/LazPackager/lazpackagerdebian.pas"/>
+        <Caret Line="105" Column="35" TopLine="100"/>
+      </Position15>
+      <Position16>
+        <Filename Value="alefa.lpr"/>
+        <Caret Line="37" Column="3" TopLine="25"/>
+      </Position16>
+      <Position17>
+        <Filename Value="doc/README"/>
+        <Caret Line="12" TopLine="5"/>
+      </Position17>
+      <Position18>
+        <Filename Value="README.md"/>
+      </Position18>
+      <Position19>
+        <Filename Value="README.md"/>
+        <Caret Line="3" Column="11"/>
+      </Position19>
+      <Position20>
+        <Filename Value="README.md"/>
+        <Caret Line="5" Column="11"/>
+      </Position20>
+      <Position21>
+        <Filename Value="README.md"/>
+        <Caret Line="11" Column="11"/>
+      </Position21>
+      <Position22>
+        <Filename Value="README.md"/>
+        <Caret Line="16" Column="255"/>
+      </Position22>
+      <Position23>
+        <Filename Value="README.md"/>
+        <Caret Line="20" Column="17" TopLine="5"/>
+      </Position23>
+      <Position24>
+        <Filename Value="alefa.lpr"/>
+        <Caret Line="102" Column="49" TopLine="100"/>
+      </Position24>
+      <Position25>
+        <Filename Value="alefa.lpr"/>
+        <Caret Line="195" Column="52" TopLine="186"/>
+      </Position25>
+      <Position26>
+        <Filename Value="alefa.lpr"/>
+        <Caret Line="223" Column="57" TopLine="207"/>
+      </Position26>
     </JumpHistory>
   </ProjectOptions>
   <CompilerOptions>

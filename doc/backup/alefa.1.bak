@@ -1,0 +1,106 @@
+.\"Created with GNOME Manpages Editor Wizard
+.\"http://sourceforge.net/projects/gmanedit2
+.TH ALEFA 1 "August 4, 2015"
+
+.SH NAME
+\fBalefa\fP - application launch helper
+
+"alefa" means "run", "go", "launch" or "execute" in malagasy language.
+
+.SH SYNOPSIS
+\fBalefa\fP 
+.RI [ OPTIONS ]...
+.I FILE
+.PP
+.RS 7
+Execute FILE. FILE has to be the last argument, after all the OPTIONs.
+.RE
+
+\fBalefa\fP 
+.RI [ OPTIONS ]...
+"FILE [--OPTIONS]"
+.PP
+.RS 7
+Execute FILE with its OPTIONS. FILE has to be the last argument, after all the OPTIONs. Note the double quotes enclosing the executable file and its parameters.
+.RE
+
+.SH DESCRIPTION
+.PP
+\fBalefa\fP  is a command line utility that allows to control the launch and execution of other programs.
+For example, it is often useful to write (more or less) simple scripts to rerun some commands until they "succeed", or to launch other commands indefinitely.
+
+There are numerous common use cases, yet it is always when we don't have the time nor the mood to type such scripts that we should. Such things should be easily automated so that we can do other tasks without being distracted and without having to restart such frustrating commands ourselves by hand: \fBwithout having to write scripts!\fP
+
+"alefa" fixes that. I decided to create it a day that I was tired of creating, modifying and adapting such scripts to make yet simple and routine tasks.
+
+.SH OPTIONS
+
+.TP
+\fB-h,  --help\fR
+Show the help screen.
+.TP
+\fB-i,  --infinite\fR
+Re-run until the end of time (or until interrupted by ctrl + c)
+.TP
+\fB-t,  --tries=NUMBER\fR
+Set number of retries to NUMBER (0 unlimits).
+.TP
+\fB-u,  --unlimits\fR
+Tries until exit code = 0 (equiv: --tries=0).
+.TP
+\fB-w,  --wait=SECONDS\fR
+Wait SECONDS seconds between retries. Default: 1 second.
+.TP
+\fB-x,  --exitcode\fR
+Show exitcode. Can be useful for testing purposes.
+
+.SH INTERRUPT
+As usual, you can interrupt \fBalefa\fR with \fBctrl + c\fR
+
+.SH EXAMPLE
+Examples abound:
+
+
+* Tries to connect over ssh to a server currently rebooting somewhere in the world, every 5 seconds until it succeeds. In case of connection loss, try again automatically every 5 seconds. When you leave yourself the ssh session by typing "exit", "Alefa" also will stop its attempts and you will return to the prompt.
+
+.RS 7
+.B
+alefa -u -w 5 "ssh my.server.org"
+.RE
+
+* Tries 10 times only to ping a website, each 30 seconds. Prints the exitcode after each attempt:
+
+.RS 7
+.B
+alefa -t 10 -w 30 -x "ping -c 5 www.debian.org"
+.RE
+
+* Regularly check the available disk space on /tmp during a long copy of huge files in this directory. Interrupt with ctrl + c:
+
+.RS 7
+.B
+alefa -i -w 10 "df -h /tmp"
+.RE
+
+.SH BUGS
+Feel free to make suggestions based on your daily needs.
+Report bugs to <thierry.andriamirado@netsika.net>
+
+.SH NOTA BENE
+* Although \fBalefa\fR is already widely usable, many other convenient features are under development and will come out as you go. Please check back regularly to benefit.
+
+* Similarly, binaries will be available online.
+
+* This version now runs on Linux (32bit and 64bit). Later ones will work on windows shortly.
+
+.SH AUTHOR
+\fBThierry Andriamirado\fR <thierry.andriamirado@netsika.net>
+
+.SH COPYRIGHT
+Copyright 2008-2015 Thierry Andriamirado.
+
+This manual page is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+This manual page is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.

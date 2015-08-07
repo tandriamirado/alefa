@@ -1,0 +1,6 @@
+*~
+*DEBUILD*
+gmon.out
+i386/
+lib/
+x86_64/
