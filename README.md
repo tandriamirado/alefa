@@ -12,11 +12,11 @@ Such things should be easily automated so that we can do other tasks without bei
 
 Synopsys
 ========
->**alefa** [OPTION]... FILE
+`alefa [OPTION]... FILE`
 
 Execute FILE. FILE has to be the last argument, after all the OPTIONs.
 
->**alefa** [OPTION]... "FILE [--OPTIONS]"
+`alefa [OPTION]... "FILE [--OPTIONS]"`
 
 Execute FILE with its OPTIONS. FILE has to be the last argument, after all the OPTIONs. Note the double quotes enclosing the executable file and its parameters.
 
