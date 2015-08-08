@@ -26,7 +26,13 @@
       <Item2 Name="lazpackager/deb/series" Value="vivid"/>
       <Item3 Name="lazpackager/deb/tpl_changelog" Value="?PACKAGE_NAME? (?FULLVERSION?) ?SERIES?; urgency=low
 
-  * Original published version (on github) ?VERSION? packaged with lazpackager
+  * v?VERSION?
+  * alefa returns a usable ExitCode
+  * Doc &amp; man (examples, contacts, bugs at
+  	https://github.com/tandriamirado/alefa/issues )
+  * .deb: idem.
+  	- Added missing README.md
+  	- Homepage: https://github.com/tandriamirado/alefa
 
  -- ?MAINTAINER? &lt;?MAINTAINER_EMAIL?>  ?DATER?
 "/>
@@ -123,7 +129,7 @@ override_dh_auto_install:
         <IsPartOfProject Value="True"/>
         <TopLine Value="171"/>
         <CursorPos X="3" Y="178"/>
-        <UsageCount Value="90"/>
+        <UsageCount Value="91"/>
         <Bookmarks Count="1">
           <Item0 Y="77"/>
         </Bookmarks>
@@ -340,7 +346,7 @@ override_dh_auto_install:
         <EditorIndex Value="4"/>
         <TopLine Value="52"/>
         <CursorPos Y="64"/>
-        <UsageCount Value="54"/>
+        <UsageCount Value="55"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit31>
@@ -350,7 +356,7 @@ override_dh_auto_install:
         <EditorIndex Value="5"/>
         <TopLine Value="48"/>
         <CursorPos Y="62"/>
-        <UsageCount Value="54"/>
+        <UsageCount Value="55"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit32>
@@ -370,7 +376,7 @@ override_dh_auto_install:
         <EditorIndex Value="7"/>
         <TopLine Value="81"/>
         <CursorPos Y="93"/>
-        <UsageCount Value="40"/>
+        <UsageCount Value="41"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit34>
@@ -379,7 +385,7 @@ override_dh_auto_install:
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="3"/>
         <CursorPos Y="6"/>
-        <UsageCount Value="38"/>
+        <UsageCount Value="39"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit35>
@@ -389,7 +395,7 @@ override_dh_auto_install:
         <EditorIndex Value="6"/>
         <TopLine Value="67"/>
         <CursorPos Y="77"/>
-        <UsageCount Value="38"/>
+        <UsageCount Value="39"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit36>
