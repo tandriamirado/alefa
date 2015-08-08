@@ -174,6 +174,8 @@ end;
 
 destructor TAlefa.Destroy;
 begin
+  ExitCode := procExec.ExitStatus;
+//  writeln('Alefa ExitCode: ' + IntToStr(ExitCode));
   procExec.Free;
   inherited Destroy;
 end;

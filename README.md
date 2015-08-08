@@ -10,6 +10,8 @@ Such things should be easily automated so that we can do other tasks without bei
 
 "**alefa**" fixes that. I decided to create it a day that I was tired of creating, modifying and adapting such scripts to make yet simple and routine tasks.
 
+"**alefa**" returns command or application's last *ExitCode*, so you could do something depending of the result.
+
 Synopsys
 ========
 `alefa [OPTION]... FILE`
@@ -59,21 +61,21 @@ Examples abound:
 
 `alefa -u -w 5 "ssh my.server.org"`
 
-* Tries 10 times only to ping a website, each 30 seconds. Prints the exitcode after each attempt::
-
-`alefa -t 10 -w 30 -x "ping -c 5 www.debian.org"`
-
 * Regularly check the available disk space on /tmp during a long copy of huge files in this directory. Interrupt with ctrl + c:
 
 `alefa -i -w 10 "df -h /tmp"`
 
-I use "**alefa**" every day since its creation in 2008. I decided to publish it, being certain that it will be useful. It already is, but many features will be added progressively, and I'll push them as soon as they are publishable.
-So.. feel free to make suggestions based on your daily needs, and please report bugs.
+* Tries 10 times only to ping a website, each 30 seconds. Prints the exitcode after each attempt. Open a MessageBox telling you when your Internet connexion is back again:
+
+`alefa -t 10 -w 30 -x "ping -c 1 www.debian.org" && gdialog --msgbox "The Internet connexion is back!" 5 40`
 
 Bugs
 ====
+I use "**alefa**" every day since its creation in 2008. I decided to publish it, being certain that it will be useful. It already is, but many features will be added progressively, and I'll push them as soon as they are publishable.
+So.. feel free to make suggestions based on your daily needs, and please report bugs.
+
 Feel  free  to make suggestions based on your daily needs.
-Report bugs to <thierry.andriamirado@netsika.net>
+Report bugs and feature requests at https://github.com/tandriamirado/alefa/issues or to <thierry.andriamirado@netsika.net>
 
 Nota Bene
 =========

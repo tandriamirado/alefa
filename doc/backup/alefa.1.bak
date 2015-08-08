@@ -24,6 +24,8 @@ Execute FILE. FILE has to be the last argument, after all the OPTIONs.
 Execute FILE with its OPTIONS. FILE has to be the last argument, after all the OPTIONs. Note the double quotes enclosing the executable file and its parameters.
 .RE
 
+Mandatory arguments to long options are mandatory for short options too.
+
 .SH DESCRIPTION
 .PP
 \fBalefa\fP  is a command line utility that allows to control the launch and execution of other programs.
@@ -32,6 +34,8 @@ For example, it is often useful to write (more or less) simple scripts to rerun 
 There are numerous common use cases, yet it is always when we don't have the time nor the mood to type such scripts that we should. Such things should be easily automated so that we can do other tasks without being distracted and without having to restart such frustrating commands ourselves by hand: \fBwithout having to write scripts!\fP
 
 "alefa" fixes that. I decided to create it a day that I was tired of creating, modifying and adapting such scripts to make yet simple and routine tasks.
+
+"alefa" returns command or application's last ExitCode, so you could do something depending of the result.
 
 .SH OPTIONS
 
@@ -68,13 +72,6 @@ Examples abound:
 alefa -u -w 5 "ssh my.server.org"
 .RE
 
-* Tries 10 times only to ping a website, each 30 seconds. Prints the exitcode after each attempt:
-
-.RS 7
-.B
-alefa -t 10 -w 30 -x "ping -c 5 www.debian.org"
-.RE
-
 * Regularly check the available disk space on /tmp during a long copy of huge files in this directory. Interrupt with ctrl + c:
 
 .RS 7
@@ -82,9 +79,16 @@ alefa -t 10 -w 30 -x "ping -c 5 www.debian.org"
 alefa -i -w 10 "df -h /tmp"
 .RE
 
+* Tries 10 times only to ping a website, each 30 seconds. Prints the exitcode after each attempt. Open a MessageBox telling you when your Internet connexion is back again:
+
+.RS 7
+.B
+alefa -t 10 -w 30 -x "ping -c 1 www.debian.org" && gdialog --msgbox "The Internet connexion is back!" 5 40
+.RE
+
 .SH BUGS
 Feel free to make suggestions based on your daily needs.
-Report bugs to <thierry.andriamirado@netsika.net>
+Report bugs and feature requests at https://github.com/tandriamirado/alefa/issues or to <thierry.andriamirado@netsika.net>
 
 .SH NOTA BENE
 * Although \fBalefa\fR is already widely usable, many other convenient features are under development and will come out as you go. Please check back regularly to benefit.
