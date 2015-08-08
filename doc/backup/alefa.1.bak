@@ -87,6 +87,9 @@ alefa -t 10 -w 30 -x "ping -c 1 www.debian.org" && gdialog --msgbox "The Interne
 .RE
 
 .SH BUGS
+I use "alefa" every day since its creation in 2008. I decided to publish it, being certain that it will be useful. It already is, but many features will be added progressively, and I'll push them as soon as they are publishable.
+So.. feel free to make suggestions based on your daily needs, and please report bugs.
+
 Feel free to make suggestions based on your daily needs.
 Report bugs and feature requests at https://github.com/tandriamirado/alefa/issues or to <thierry.andriamirado@netsika.net>
 

@@ -86,6 +86,7 @@ Nota Bene
 Author
 ======
 **Thierry Andriamirado** <thierry.andriamirado@netsika.net>
+**Twitter**: https://twitter.com/tandriamirado
 
 Copyright and License
 =====================
