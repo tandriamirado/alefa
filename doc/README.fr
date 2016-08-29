@@ -62,6 +62,13 @@ N'hésitez pas alors à faire des propositions selon vos besoins journaliers, et
 N'hésitez pas à faire des suggestions basées sur vos besoins journalières.
 Signalez les bugs à <thierry.andriamirado@netsika.net>
 
+Sites web
+=========
+http://thierry.andriamirado.netsika.net
+https://github.com/tandriamirado/alefa
+https://sourceforge.net/projects/alefa/
+https://launchpad.net/alefa
+
 Nota Bene
 =========
 * Même si "alefa" est déjà largement utilisable, beaucoup d'autres fonctionnalités pratiques sont en cours de développement et sortiront au fur et à mesure. Revenez régulièrement pour en bénéficier.
@@ -75,7 +82,7 @@ Twitter: https://twitter.com/tandriamirado
 
 Copyright and License
 =====================
-Copyright 2008-2015 Thierry Andriamirado.
+Copyright 2008-2016 Thierry Andriamirado.
 
 GNU General Public License; either version 2 of  the  License, or (at your option) any later version.
 

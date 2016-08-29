@@ -2,7 +2,7 @@ program alefa;
 
 { <description>
 
-  Copyright (C) 2015 Thierry Andriamirado <thierry.andriamirado@netsika.net>
+  Copyright (C) 2016 Thierry Andriamirado <thierry.andriamirado@netsika.net>
 
   This source is free software; you can redistribute it and/or modify it under
   the terms of the GNU General Public License as published by the Free
@@ -138,13 +138,13 @@ begin
     Halt;
   end;
 
-  // parse parameters
-  
   if ParamCount = 0 then begin
     ShowUsage;
     Halt;
   end;
   
+  // parse parameters
+
   if HasOption('h', 'help') then begin
     // Show help screen and exit
     WriteHelp;
@@ -184,7 +184,7 @@ procedure TAlefa.WriteHelp;
 begin
   { add your help code here }
   writeln('Alefa, application launch helper');
-  writeln('Copyright (c) 2015 by Thierry Andriamirado');
+  writeln('Copyright (c) 2016 by Thierry Andriamirado');
   WriteLn('');
   writeln('Usage: ', ExtractFileName(ExeName),' [OPTION]... FILE');
   WriteLn('Execute FILE. FILE has to be the last argument, after all the OPTIONs.');
@@ -208,7 +208,7 @@ end;
 procedure TAlefa.ShowUsage;
 begin
   writeln('Alefa, application launch helper');
-  writeln('Copyright (c) 2015 by Thierry Andriamirado');
+  writeln('Copyright (c) 2016 by Thierry Andriamirado');
   WriteLn('');
   writeln('Usage: ', ExtractFileName(ExeName),' [OPTION]... FILE');
   WriteLn('Execute FILE. FILE has to be the last argument, after all the OPTIONs.');

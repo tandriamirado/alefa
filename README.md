@@ -77,6 +77,13 @@ So.. feel free to make suggestions based on your daily needs, and please report 
 Feel  free  to make suggestions based on your daily needs.
 Report bugs and feature requests at https://github.com/tandriamirado/alefa/issues or to <thierry.andriamirado@netsika.net>
 
+Websites
+========
+http://thierry.andriamirado.netsika.net
+https://github.com/tandriamirado/alefa
+https://sourceforge.net/projects/alefa/
+https://launchpad.net/alefa
+
 Nota Bene
 =========
 * Although **alefa** is already widely usable, many other convenient features are under development and will come out as you go. Please check back regularly to benefit.
@@ -90,7 +97,7 @@ Author
 
 Copyright and License
 =====================
-Copyright 2008-2015 Thierry Andriamirado.
+Copyright 2008-2016 Thierry Andriamirado.
 
 GNU General Public License; either version 2 of  the  License, or (at your option) any later version.
 
