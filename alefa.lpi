@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
   <ProjectOptions>
-    <Version Value="9"/>
+    <Version Value="11"/>
     <General>
       <Flags>
         <LRSInOutputDirectory Value="False"/>
@@ -16,8 +16,8 @@
     <VersionInfo>
       <UseVersionInfo Value="True"/>
       <AutoIncrementBuild Value="True"/>
-      <MinorVersionNr Value="2"/>
-      <BuildNr Value="3"/>
+      <MinorVersionNr Value="3"/>
+      <BuildNr Value="7"/>
       <StringTable CompanyName="Netsika" FileDescription="Allows to control the launch/execution of other programs" LegalCopyright="(c) 2016 Thierry Andriamirado &lt;thierry.andriamirado@netsika.net>" ProductName="alefa"/>
     </VersionInfo>
     <CustomData Count="13">
@@ -113,23 +113,25 @@ override_dh_auto_install:
     </BuildModes>
     <PublishOptions>
       <Version Value="2"/>
-      <IgnoreBinaries Value="False"/>
-      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
-      <ExcludeFileFilter Value="*.(bak|ppu|ppw|o|so);*~;backup"/>
     </PublishOptions>
     <RunParams>
-      <local>
-        <FormatVersion Value="1"/>
-        <LaunchingApplication Use="True"/>
-      </local>
+      <FormatVersion Value="2"/>
+      <Modes Count="1">
+        <Mode0 Name="default">
+          <local>
+            <LaunchingApplication Use="True"/>
+          </local>
+        </Mode0>
+      </Modes>
     </RunParams>
-    <Units Count="39">
+    <Units Count="34">
       <Unit0>
         <Filename Value="alefa.lpr"/>
         <IsPartOfProject Value="True"/>
-        <TopLine Value="227"/>
-        <CursorPos X="21" Y="5"/>
-        <UsageCount Value="118"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="246"/>
+        <CursorPos X="41" Y="254"/>
+        <UsageCount Value="153"/>
         <Bookmarks Count="1">
           <Item0 Y="77"/>
         </Bookmarks>
@@ -140,160 +142,128 @@ override_dh_auto_install:
         <UnitName Value="CustApp"/>
         <TopLine Value="231"/>
         <CursorPos X="3" Y="239"/>
-        <UsageCount Value="11"/>
+        <UsageCount Value="8"/>
       </Unit1>
       <Unit2>
-        <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/sysutils/sysutilh.inc"/>
-        <TopLine Value="158"/>
-        <CursorPos X="14" Y="169"/>
-        <UsageCount Value="2"/>
-      </Unit2>
-      <Unit3>
-        <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/sysutils/sysutils.inc"/>
-        <TopLine Value="445"/>
-        <CursorPos X="3" Y="453"/>
-        <UsageCount Value="2"/>
-      </Unit3>
-      <Unit4>
         <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/sysutils/osutilsh.inc"/>
         <TopLine Value="13"/>
         <CursorPos X="11" Y="25"/>
-        <UsageCount Value="5"/>
-      </Unit4>
-      <Unit5>
+        <UsageCount Value="2"/>
+      </Unit2>
+      <Unit3>
         <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/unix/sysutils.pp"/>
         <TopLine Value="886"/>
         <CursorPos X="50" Y="883"/>
-        <UsageCount Value="11"/>
-      </Unit5>
-      <Unit6>
-        <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/unix/bunxh.inc"/>
-        <TopLine Value="50"/>
-        <CursorPos X="15" Y="61"/>
-        <UsageCount Value="2"/>
-      </Unit6>
-      <Unit7>
-        <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/linux/bunxsysc.inc"/>
-        <TopLine Value="373"/>
-        <CursorPos X="3" Y="376"/>
-        <UsageCount Value="2"/>
-      </Unit7>
-      <Unit8>
+        <UsageCount Value="8"/>
+      </Unit3>
+      <Unit4>
         <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/sysutils/syswideh.inc"/>
         <TopLine Value="11"/>
         <CursorPos X="11" Y="21"/>
-        <UsageCount Value="11"/>
-      </Unit8>
-      <Unit9>
+        <UsageCount Value="8"/>
+      </Unit4>
+      <Unit5>
         <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/sysutils/syswide.inc"/>
         <TopLine Value="35"/>
         <CursorPos Y="40"/>
-        <UsageCount Value="11"/>
-      </Unit9>
-      <Unit10>
+        <UsageCount Value="8"/>
+      </Unit5>
+      <Unit6>
         <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/sysutils/sysstrh.inc"/>
         <TopLine Value="219"/>
         <CursorPos X="10" Y="230"/>
-        <UsageCount Value="11"/>
-      </Unit10>
-      <Unit11>
+        <UsageCount Value="8"/>
+      </Unit6>
+      <Unit7>
         <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/sysutils/sysstr.inc"/>
         <TopLine Value="541"/>
         <CursorPos Y="541"/>
-        <UsageCount Value="11"/>
-      </Unit11>
-      <Unit12>
+        <UsageCount Value="8"/>
+      </Unit7>
+      <Unit8>
         <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/sysutils/syspchh.inc"/>
         <TopLine Value="14"/>
         <CursorPos X="10" Y="25"/>
-        <UsageCount Value="11"/>
-      </Unit12>
-      <Unit13>
+        <UsageCount Value="8"/>
+      </Unit8>
+      <Unit9>
         <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/x86_64/strings.inc"/>
         <TopLine Value="12"/>
         <CursorPos X="10" Y="12"/>
-        <UsageCount Value="11"/>
-      </Unit13>
-      <Unit14>
+        <UsageCount Value="8"/>
+      </Unit9>
+      <Unit10>
         <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/inc/genstr.inc"/>
         <TopLine Value="202"/>
         <CursorPos X="9" Y="208"/>
-        <UsageCount Value="11"/>
-      </Unit14>
-      <Unit15>
+        <UsageCount Value="8"/>
+      </Unit10>
+      <Unit11>
         <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/inc/stringsi.inc"/>
         <TopLine Value="37"/>
         <CursorPos X="10" Y="37"/>
-        <UsageCount Value="11"/>
-      </Unit15>
-      <Unit16>
+        <UsageCount Value="8"/>
+      </Unit11>
+      <Unit12>
         <Filename Value="/usr/local/src/fpcbuild-2.2.0/fpcsrc/rtl/objpas/objpas.pp"/>
         <TopLine Value="181"/>
         <CursorPos Y="186"/>
-        <UsageCount Value="10"/>
-      </Unit16>
-      <Unit17>
-        <Filename Value="/usr/local/src/svn/lazarus/trunk/ide/lazarus.pp"/>
-        <UnitName Value="Lazarus"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="108"/>
-        <CursorPos Y="130"/>
-        <UsageCount Value="3"/>
-      </Unit17>
-      <Unit18>
+        <UsageCount Value="7"/>
+      </Unit12>
+      <Unit13>
         <Filename Value="../components/3dparties/LazPackager/lazpackagerbase.pas"/>
         <UnitName Value="LazPackagerBase"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="260"/>
         <CursorPos X="32" Y="266"/>
-        <UsageCount Value="5"/>
-      </Unit18>
-      <Unit19>
+        <UsageCount Value="2"/>
+      </Unit13>
+      <Unit14>
         <Filename Value="../git_forks/LazPackager/lazpackagerbase.pas"/>
         <UnitName Value="LazPackagerBase"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="44"/>
         <CursorPos X="3" Y="50"/>
-        <UsageCount Value="27"/>
-      </Unit19>
-      <Unit20>
+        <UsageCount Value="24"/>
+      </Unit14>
+      <Unit15>
         <Filename Value="/usr/share/lazarus/1.4.2/components/ideintf/ideexterntoolintf.pas"/>
         <UnitName Value="IDEExternToolIntf"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="2405"/>
         <CursorPos X="17" Y="675"/>
-        <UsageCount Value="4"/>
-      </Unit20>
-      <Unit21>
+        <UsageCount Value="1"/>
+      </Unit15>
+      <Unit16>
         <Filename Value="DEBUILD.sh"/>
         <EditorIndex Value="-1"/>
         <CursorPos Y="4"/>
-        <UsageCount Value="4"/>
+        <UsageCount Value="1"/>
         <DefaultSyntaxHighlighter Value="Bash"/>
-      </Unit21>
-      <Unit22>
+      </Unit16>
+      <Unit17>
         <Filename Value="../git_forks/LazPackager/lazpackagerdebian.pas"/>
         <UnitName Value="LazPackagerDebian"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="188"/>
         <CursorPos X="56" Y="188"/>
-        <UsageCount Value="25"/>
-      </Unit22>
-      <Unit23>
+        <UsageCount Value="22"/>
+      </Unit17>
+      <Unit18>
         <Filename Value="../git_forks/LazPackager/frmlazpackagerpreview.pas"/>
         <UnitName Value="frmLazPackagerPreview"/>
         <EditorIndex Value="-1"/>
-        <UsageCount Value="4"/>
-      </Unit23>
-      <Unit24>
+        <UsageCount Value="1"/>
+      </Unit18>
+      <Unit19>
         <Filename Value="../git_forks/LazPackager/lazpackagermain.pas"/>
         <UnitName Value="LazPackagerMain"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="25"/>
         <CursorPos X="17" Y="60"/>
-        <UsageCount Value="4"/>
-      </Unit24>
-      <Unit25>
+        <UsageCount Value="1"/>
+      </Unit19>
+      <Unit20>
         <Filename Value="../git_forks/LazPackager/frmlazpackageroptionsdeb.pas"/>
         <ComponentName Value="FDebianOptions"/>
         <HasResources Value="True"/>
@@ -302,229 +272,236 @@ override_dh_auto_install:
         <EditorIndex Value="-1"/>
         <TopLine Value="169"/>
         <CursorPos X="6" Y="169"/>
-        <UsageCount Value="4"/>
-      </Unit25>
-      <Unit26>
+        <UsageCount Value="1"/>
+      </Unit20>
+      <Unit21>
         <Filename Value="/usr/share/fpcsrc/2.6.4/rtl/objpas/sysutils/sysstrh.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="209"/>
         <CursorPos X="10" Y="218"/>
-        <UsageCount Value="4"/>
-      </Unit26>
-      <Unit27>
+        <UsageCount Value="1"/>
+      </Unit21>
+      <Unit22>
         <Filename Value="/usr/share/lazarus/1.4.2/lcl/forms.pp"/>
         <UnitName Value="Forms"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="1395"/>
         <CursorPos X="15" Y="1402"/>
-        <UsageCount Value="4"/>
-      </Unit27>
-      <Unit28>
+        <UsageCount Value="1"/>
+      </Unit22>
+      <Unit23>
         <Filename Value="/usr/share/lazarus/1.4.2/lcl/include/application.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="2225"/>
         <CursorPos X="3" Y="2214"/>
-        <UsageCount Value="4"/>
-      </Unit28>
-      <Unit29>
+        <UsageCount Value="1"/>
+      </Unit23>
+      <Unit24>
         <Filename Value="/usr/share/fpcsrc/2.6.4/rtl/objpas/sysutils/finah.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="22"/>
         <CursorPos X="10" Y="42"/>
-        <UsageCount Value="25"/>
-      </Unit29>
-      <Unit30>
+        <UsageCount Value="22"/>
+      </Unit24>
+      <Unit25>
         <Filename Value="/usr/share/fpcsrc/2.6.4/rtl/objpas/sysutils/fina.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="396"/>
         <CursorPos X="28" Y="410"/>
-        <UsageCount Value="25"/>
-      </Unit30>
-      <Unit31>
+        <UsageCount Value="22"/>
+      </Unit25>
+      <Unit26>
         <Filename Value="doc/README"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="59"/>
-        <CursorPos Y="74"/>
-        <UsageCount Value="82"/>
+        <TopLine Value="24"/>
+        <CursorPos X="51" Y="34"/>
+        <UsageCount Value="117"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="None"/>
-      </Unit31>
-      <Unit32>
+      </Unit26>
+      <Unit27>
         <Filename Value="doc/README.fr"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
-        <TopLine Value="56"/>
-        <CursorPos X="10" Y="66"/>
-        <UsageCount Value="82"/>
+        <TopLine Value="20"/>
+        <CursorPos X="15" Y="32"/>
+        <UsageCount Value="117"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="None"/>
-      </Unit32>
-      <Unit33>
+      </Unit27>
+      <Unit28>
         <Filename Value="doc/alefa.man"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="30"/>
+        <UsageCount Value="27"/>
         <DefaultSyntaxHighlighter Value="None"/>
-      </Unit33>
-      <Unit34>
+      </Unit28>
+      <Unit29>
         <Filename Value="doc/alefa.1"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="5"/>
-        <TopLine Value="99"/>
-        <CursorPos X="20" Y="109"/>
-        <UsageCount Value="68"/>
+        <TopLine Value="43"/>
+        <CursorPos Y="52"/>
+        <UsageCount Value="103"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="None"/>
-      </Unit34>
-      <Unit35>
+      </Unit29>
+      <Unit30>
         <Filename Value=".gitignore"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="1"/>
-        <CursorPos Y="9"/>
-        <UsageCount Value="66"/>
+        <CursorPos X="11" Y="8"/>
+        <UsageCount Value="101"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="None"/>
-      </Unit35>
-      <Unit36>
+      </Unit30>
+      <Unit31>
         <Filename Value="README.md"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="4"/>
-        <TopLine Value="71"/>
-        <CursorPos Y="86"/>
-        <UsageCount Value="66"/>
+        <TopLine Value="32"/>
+        <CursorPos Y="39"/>
+        <UsageCount Value="101"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="None"/>
-      </Unit36>
-      <Unit37>
+      </Unit31>
+      <Unit32>
         <Filename Value="/usr/share/fpcsrc/2.6.4/rtl/inc/objpash.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="234"/>
         <CursorPos X="25" Y="241"/>
-        <UsageCount Value="25"/>
-      </Unit37>
-      <Unit38>
+        <UsageCount Value="22"/>
+      </Unit32>
+      <Unit33>
         <Filename Value="/usr/share/fpcsrc/2.6.4/rtl/inc/objpas.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="967"/>
         <CursorPos X="29" Y="969"/>
-        <UsageCount Value="25"/>
-      </Unit38>
+        <UsageCount Value="22"/>
+      </Unit33>
     </Units>
-    <JumpHistory Count="28" HistoryIndex="27">
+    <JumpHistory Count="30" HistoryIndex="28">
       <Position1>
-        <Filename Value="alefa.lpr"/>
-        <Caret Line="37" Column="3" TopLine="25"/>
-      </Position1>
-      <Position2>
         <Filename Value="doc/README"/>
         <Caret Line="12" TopLine="5"/>
+      </Position1>
+      <Position2>
+        <Filename Value="README.md"/>
       </Position2>
       <Position3>
         <Filename Value="README.md"/>
+        <Caret Line="3" Column="11"/>
       </Position3>
       <Position4>
         <Filename Value="README.md"/>
-        <Caret Line="3" Column="11"/>
+        <Caret Line="5" Column="11"/>
       </Position4>
       <Position5>
         <Filename Value="README.md"/>
-        <Caret Line="5" Column="11"/>
+        <Caret Line="11" Column="11"/>
       </Position5>
       <Position6>
         <Filename Value="README.md"/>
-        <Caret Line="11" Column="11"/>
+        <Caret Line="16" Column="255"/>
       </Position6>
       <Position7>
         <Filename Value="README.md"/>
-        <Caret Line="16" Column="255"/>
+        <Caret Line="20" Column="17" TopLine="5"/>
       </Position7>
       <Position8>
-        <Filename Value="README.md"/>
-        <Caret Line="20" Column="17" TopLine="5"/>
+        <Filename Value="alefa.lpr"/>
+        <Caret Line="102" Column="49" TopLine="100"/>
       </Position8>
       <Position9>
         <Filename Value="alefa.lpr"/>
-        <Caret Line="102" Column="49" TopLine="100"/>
+        <Caret Line="195" Column="52" TopLine="186"/>
       </Position9>
       <Position10>
         <Filename Value="alefa.lpr"/>
-        <Caret Line="195" Column="52" TopLine="186"/>
+        <Caret Line="223" Column="57" TopLine="207"/>
       </Position10>
       <Position11>
         <Filename Value="alefa.lpr"/>
-        <Caret Line="223" Column="57" TopLine="207"/>
+        <Caret Line="209" TopLine="209"/>
       </Position11>
       <Position12>
         <Filename Value="alefa.lpr"/>
-        <Caret Line="209" TopLine="209"/>
       </Position12>
       <Position13>
         <Filename Value="alefa.lpr"/>
+        <Caret Line="48" Column="20" TopLine="42"/>
       </Position13>
       <Position14>
         <Filename Value="alefa.lpr"/>
-        <Caret Line="48" Column="20" TopLine="42"/>
+        <Caret Line="49" Column="21" TopLine="42"/>
       </Position14>
       <Position15>
         <Filename Value="alefa.lpr"/>
-        <Caret Line="49" Column="21" TopLine="42"/>
+        <Caret Line="100" Column="22" TopLine="85"/>
       </Position15>
       <Position16>
         <Filename Value="alefa.lpr"/>
-        <Caret Line="100" Column="22" TopLine="85"/>
+        <Caret Line="106" Column="20" TopLine="98"/>
       </Position16>
       <Position17>
         <Filename Value="alefa.lpr"/>
-        <Caret Line="106" Column="20" TopLine="98"/>
+        <Caret Line="107" Column="53" TopLine="98"/>
       </Position17>
       <Position18>
         <Filename Value="alefa.lpr"/>
-        <Caret Line="107" Column="53" TopLine="98"/>
+        <Caret Line="115" Column="18" TopLine="103"/>
       </Position18>
       <Position19>
         <Filename Value="alefa.lpr"/>
-        <Caret Line="115" Column="18" TopLine="103"/>
+        <Caret Line="116" Column="19" TopLine="103"/>
       </Position19>
       <Position20>
         <Filename Value="alefa.lpr"/>
-        <Caret Line="116" Column="19" TopLine="103"/>
+        <Caret Line="123" Column="5" TopLine="110"/>
       </Position20>
       <Position21>
         <Filename Value="alefa.lpr"/>
-        <Caret Line="123" Column="5" TopLine="110"/>
+        <Caret Line="132" Column="66" TopLine="120"/>
       </Position21>
       <Position22>
         <Filename Value="alefa.lpr"/>
-        <Caret Line="132" Column="66" TopLine="120"/>
+        <Caret Line="194" Column="39" TopLine="183"/>
       </Position22>
       <Position23>
         <Filename Value="alefa.lpr"/>
-        <Caret Line="194" Column="39" TopLine="183"/>
+        <Caret Line="228" Column="3" TopLine="219"/>
       </Position23>
       <Position24>
         <Filename Value="alefa.lpr"/>
-        <Caret Line="228" Column="3" TopLine="219"/>
+        <Caret Line="35" Column="3" TopLine="26"/>
       </Position24>
       <Position25>
         <Filename Value="alefa.lpr"/>
-        <Caret Line="35" Column="3" TopLine="26"/>
+        <Caret Line="177" Column="3" TopLine="174"/>
       </Position25>
       <Position26>
         <Filename Value="alefa.lpr"/>
-        <Caret Line="177" Column="3" TopLine="174"/>
+        <Caret Line="122" Column="73" TopLine="118"/>
       </Position26>
       <Position27>
         <Filename Value="alefa.lpr"/>
-        <Caret Line="122" Column="73" TopLine="118"/>
+        <Caret Line="178" Column="50" TopLine="169"/>
       </Position27>
       <Position28>
         <Filename Value="alefa.lpr"/>
-        <Caret Line="178" Column="50" TopLine="169"/>
+        <Caret Line="58" Column="25" TopLine="50"/>
       </Position28>
+      <Position29>
+        <Filename Value="alefa.lpr"/>
+        <Caret Line="99" Column="3" TopLine="96"/>
+      </Position29>
+      <Position30>
+        <Filename Value="alefa.lpr"/>
+        <Caret Line="62" Column="5" TopLine="52"/>
+      </Position30>
     </JumpHistory>
   </ProjectOptions>
   <CompilerOptions>

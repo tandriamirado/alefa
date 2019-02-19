@@ -34,6 +34,10 @@ Show the help screen.
 
 Re-run until the end of time (or until interrupted by ctrl + c)
 
+**-l   --file_list**
+
+Run command on each file in the list
+
 **-t,  --tries=NUMBER**
 
 Set number of retries to NUMBER (0 unlimits).

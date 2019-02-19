@@ -49,13 +49,17 @@ type
     optUntilExitCode0 : boolean;
     optTries: integer;
     optWait: longint;
-    procedure RunIt;
+    optFileList: String;
+    FileListMode: boolean;
+    procedure RunItAsIs;
     procedure setOptions;
     procedure initAlefa;
     procedure postExecTry;
+    procedure RunInFileListMode;
   protected
     procedure DoRun; override;
   public
+    FileList: TStringList;
     constructor Create(TheOwner: TComponent); override;
     destructor Destroy; override;
     procedure WriteHelp; virtual;
@@ -64,7 +68,7 @@ type
 
 { TAlefa }
 
-procedure TAlefa.RunIt;
+procedure TAlefa.RunItAsIs;
 var
   pathAppToRun, parametersAppToRun : String;
   nbTries: Integer;
@@ -77,7 +81,7 @@ begin
   repeat
     if nbTries > 0 then begin
        Sleep(optWait);
-       writeln('-- Try #' + IntToStr(nbTries + 1) + '/' + nbEndStr + ':');
+       writeln('++ Try #' + IntToStr(nbTries + 1) + ' / ' + nbEndStr + ':');
     end;
     procExec.Active := true;           // go!
     nbTries := nbTries + 1;
@@ -85,6 +89,38 @@ begin
     //writeln('nbTries: ' + IntToStr(nbTries));
   until ((nbTries = optTries) and (optInfinite = false)) or ((procExec.ExitStatus = 0)  and (optInfinite = false));
 
+end;
+
+procedure TAlefa.RunInFileListMode;
+var
+  FileNumber, i: integer;
+  tmpFileName: String;
+begin
+  writeln('+RunInFileListMode');
+
+  if FileExists(optFileList) then begin
+       // Populate the FileList TSringList:
+       FileList.LoadFromFile(optFileList);
+       FileNumber := FileList.Count;
+       writeln('+Filelist: ' + optFileList + ', ' + IntToStr(FileNumber) + ' items.');
+     end else begin
+       writeln('Error: File ' + optFileList + ' doesn''t exist!');
+       Halt;
+     end;
+
+  { TODO 2 -cFeature : Add feature: check if each file in the FileList exists! }
+
+//  procExec.CommandLine := 'sh -c "' + appToRun +'"';
+
+  for i := 0 to (FileNumber -1) do begin
+      tmpFileName := FileList.Strings[i];
+      if FileExists(tmpFileName) then begin
+         writeln(IntToStr(i) + ': ' + tmpFileName);
+         procExec.CommandLine := 'sh -c "' + appToRun + ' ' + tmpFileName + '"';
+         procExec.Active := true;
+         postExecTry
+      end else writeln(IntToStr(i) + ': ' + tmpFileName + ' doesn''t exist! Not processed!');
+  end;
 end;
 
 procedure TAlefa.setOptions;
@@ -106,6 +142,17 @@ begin
   // -x, --exitcode: show exit code
   if HasOption('x', 'exitcode') then OptShowExitCode := true;
 
+  // -d, --exclude_file_list: the exclude file list
+  if (HasOption('d', 'exclude_file_list')) or (HasOption('l', 'file_list')) then begin
+     FileListMode := true;
+     //if HasOption('d', 'exclude_file_list') then
+     //   optFileList := GetOptionValue('d','exclude_file_list')
+     //   else optFileList := GetOptionValue('l','file_list');
+     optFileList := GetOptionValue('l','file_list');          // When exclude_file_list implemented: Delete and uncomment 3 lines above!
+     FileList := TStringList.Create;
+//     writeln('+Filelist: ' + optFileList + ', ' + IntToStr(FileList.Count) + ' items.');
+  end;
+
   { Processe's options }
   procExec.Options := procExec.Options + [poWaitOnExit];
 end;
@@ -115,6 +162,7 @@ begin
   OptShowExitCode := false;
   OptUntilExitCode0 := false;
   optTries := 0;
+  FileListMode := false;
 end;
 
 procedure TAlefa.postExecTry;
@@ -129,7 +177,8 @@ var
 begin
   initAlefa;
   // quick check parameters
-  ErrorMsg:=CheckOptions('h i x t: u w::','help infinite exitcode tries: unlimits wait::');
+//  ErrorMsg:=CheckOptions('h i x t: u w:: l:: d::','help infinite exitcode tries: unlimits wait:: file_list:: exclude_file_list::');
+ErrorMsg:=CheckOptions('h i x t: u w:: l::','help infinite exitcode tries: unlimits wait:: file_list::');
 
   if ErrorMsg<>'' then begin
     WriteHelp;
@@ -155,7 +204,9 @@ begin
     setOptions;
 
     // Run it!
-    RunIt;
+    if (not FileListMode) then RunItAsIs          // 'Normal' run mode
+       else RunInFileListMode;                    // File List Mode
+
     //postExecTry;
   end;
 
@@ -177,6 +228,7 @@ begin
   ExitCode := procExec.ExitStatus;
 //  writeln('Alefa ExitCode: ' + IntToStr(ExitCode));
   procExec.Free;
+  if FileListMode then FileList.Free;
   inherited Destroy;
 end;
 
@@ -186,17 +238,24 @@ begin
   writeln('Alefa, application launch helper');
   writeln('Copyright (c) 2016 by Thierry Andriamirado');
   WriteLn('');
+  WriteLn('  -h,  --help               show this help screen.');
+  WriteLn('[Normal mode]');
+  WriteLn('');
   writeln('Usage: ', ExtractFileName(ExeName),' [OPTION]... FILE');
   WriteLn('Execute FILE. FILE has to be the last argument, after all the OPTIONs.');
   WriteLn('');
   WriteLn('Mandatory arguments to long options are mandatory for short options too.');
   WriteLn('');
-  WriteLn('  -h,  --help               show this help screen.');
-  writeln('  -i,  -infinite            re-run until end of time');
-  WriteLn('  -t,  --tries=NUMBER       set number of retries to NUMBER (0 unlimits).');
-  WriteLn('  -u,  --unlimits           tries until exit code = 0 (equiv: --tries=0).');
-  WriteLn('  -w,  --wait=SECONDS       wait SECONDS between retries.');
-  WriteLn('  -x,  --exitcode           show exitcode. Can be useful for testing purposes.');
+  writeln('  -i,  --infinite           Re-run until end of time');
+  writeln('  -l,  --file_list          Run command on each file in the list');
+  WriteLn('  -t,  --tries=NUMBER       Set number of retries to NUMBER (0 unlimits).');
+  WriteLn('  -u,  --unlimits           Tries until exit code = 0 (equiv: --tries=0).');
+  WriteLn('  -w,  --wait=SECONDS       Wait SECONDS between retries.');
+  WriteLn('  -x,  --exitcode           Show exitcode. Can be useful for testing purposes.');
+  WriteLn('');
+  WriteLn('[File list mode]');
+  WriteLn('  -l,  --file_list=PATH_TO_FILELIST       File listing the files to work with');
+//  WriteLn('  -d,  --exclude_file_list=PATH_TO_FILELIST       File listing the files to excluDe');
   WriteLn('');
   writeln('Type "man alefa" for the complete manual page');
   WriteLn('--');
@@ -210,11 +269,11 @@ begin
   writeln('Alefa, application launch helper');
   writeln('Copyright (c) 2016 by Thierry Andriamirado');
   WriteLn('');
-  writeln('Usage: ', ExtractFileName(ExeName),' [OPTION]... FILE');
-  WriteLn('Execute FILE. FILE has to be the last argument, after all the OPTIONs.');
+  writeln('Usage: ', ExtractFileName(ExeName),' [OPTION]... COMMAND');
+  WriteLn('Execute COMMAND. COMMAND has to be the last argument, after all the OPTIONs.');
   WriteLn('');
-  writeln('Usage #2: ', ExtractFileName(ExeName),' [OPTION]... "FILE [--OPTIONS]"');
-  WriteLn('Execute FILE with its OPTIONS. FILE has to be the last argument, after all the OPTIONs. Note the double quotes enclosing the executable file and its parameters.');
+  writeln('Usage #2: ', ExtractFileName(ExeName),' [OPTION]... "COMMAND [--OPTIONS]"');
+  WriteLn('Execute COMMAND with its own OPTIONS. COMMAND has to be the last argument, after all the alefa''s OPTIONs. Note the double quotes enclosing the executable file and its parameters.');
   WriteLn('');
   WriteLn('Mandatory arguments to long options are mandatory for short options too.');
   WriteLn('--');
