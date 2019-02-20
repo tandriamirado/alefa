@@ -88,7 +88,7 @@ override_dh_auto_install:
 	dh $@
 "/>
       <Item7 Name="lazpackager/description" Value="Allows to control the launch/execution of other programs"/>
-      <Item8 Name="lazpackager/description_long" Value="It is often useful to write (more or less) simple scripts to rerun some commands until they &quot;succeed&quot;, or to launch other commands indefinitely. There are numerous common use cases.
+      <Item8 Name="lazpackager/description_long" Value="It is often useful to write (more or less) simple scripts to rerun some commands until they &quot;succeed&quot;, or to launch other commands indefinitely.  No more wasted time: alefa is there! There are numerous common use cases.
  Such things should be easily automated so that we can do other tasks without being distracted and without having to restart such frustrating commands ourselves by hand: without creating scripts!
  &quot;alefa&quot; fixes that. I decided to create it a day that I was tired of creating, modifying and adapting such scripts to make yet simple and routine tasks.
  &quot;alefa&quot; returns command or application's last ExitCode, so you could do something depending of the result."/>
@@ -124,7 +124,7 @@ override_dh_auto_install:
         <IsPartOfProject Value="True"/>
         <TopLine Value="246"/>
         <CursorPos X="76" Y="250"/>
-        <UsageCount Value="157"/>
+        <UsageCount Value="158"/>
         <Bookmarks Count="1">
           <Item0 Y="77"/>
         </Bookmarks>
@@ -307,18 +307,19 @@ override_dh_auto_install:
         <Filename Value="doc/README"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="2"/>
-        <CursorPos X="138" Y="5"/>
-        <UsageCount Value="121"/>
+        <TopLine Value="74"/>
+        <CursorPos X="20" Y="91"/>
+        <UsageCount Value="122"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit26>
       <Unit27>
         <Filename Value="doc/README.fr"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
-        <CursorPos Y="11"/>
-        <UsageCount Value="121"/>
+        <TopLine Value="71"/>
+        <CursorPos X="20" Y="88"/>
+        <UsageCount Value="122"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit27>
@@ -335,9 +336,9 @@ override_dh_auto_install:
         <Filename Value="doc/alefa.1"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="5"/>
-        <TopLine Value="21"/>
-        <CursorPos X="159" Y="32"/>
-        <UsageCount Value="107"/>
+        <TopLine Value="13"/>
+        <CursorPos X="20" Y="112"/>
+        <UsageCount Value="108"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit29>
@@ -346,16 +347,17 @@ override_dh_auto_install:
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="1"/>
         <CursorPos X="11" Y="8"/>
-        <UsageCount Value="105"/>
+        <UsageCount Value="106"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit30>
       <Unit31>
         <Filename Value="README.md"/>
         <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="4"/>
-        <CursorPos X="106" Y="5"/>
-        <UsageCount Value="105"/>
+        <CursorPos Y="6"/>
+        <UsageCount Value="106"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit31>
