@@ -21,18 +21,12 @@
       <StringTable CompanyName="Netsika" FileDescription="Allows to control the launch/execution of other programs" LegalCopyright="(c) 2016 Thierry Andriamirado &lt;thierry.andriamirado@netsika.net>" ProductName="alefa"/>
     </VersionInfo>
     <CustomData Count="13">
-      <Item0 Name="lazpackager/copyright" Value="2016 Thierry Andriamirado"/>
+      <Item0 Name="lazpackager/copyright" Value="2019 Thierry Andriamirado"/>
       <Item1 Name="lazpackager/deb/ppa" Value="ppa:thierry.andriamirado/alefa"/>
       <Item2 Name="lazpackager/deb/series" Value="vivid"/>
       <Item3 Name="lazpackager/deb/tpl_changelog" Value="?PACKAGE_NAME? (?FULLVERSION?) ?SERIES?; urgency=low
 
-  * v?VERSION?
-  * alefa returns a usable ExitCode
-  * Doc &amp; man (examples, contacts, bugs at
-  	https://github.com/tandriamirado/alefa/issues )
-  * .deb: idem.
-  	- Added missing README.md
-  	- Homepage: https://github.com/tandriamirado/alefa
+  * -l   --file_list** : Run command on each file in the list
 
  -- ?MAINTAINER? &lt;?MAINTAINER_EMAIL?>  ?DATER?
 "/>
@@ -128,10 +122,9 @@ override_dh_auto_install:
       <Unit0>
         <Filename Value="alefa.lpr"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <TopLine Value="246"/>
-        <CursorPos X="41" Y="254"/>
-        <UsageCount Value="153"/>
+        <CursorPos X="76" Y="250"/>
+        <UsageCount Value="157"/>
         <Bookmarks Count="1">
           <Item0 Y="77"/>
         </Bookmarks>
@@ -314,19 +307,18 @@ override_dh_auto_install:
         <Filename Value="doc/README"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="24"/>
-        <CursorPos X="51" Y="34"/>
-        <UsageCount Value="117"/>
+        <CursorPos X="138" Y="5"/>
+        <UsageCount Value="121"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit26>
       <Unit27>
         <Filename Value="doc/README.fr"/>
         <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
-        <TopLine Value="20"/>
-        <CursorPos X="15" Y="32"/>
-        <UsageCount Value="117"/>
+        <CursorPos Y="11"/>
+        <UsageCount Value="121"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit27>
@@ -343,9 +335,9 @@ override_dh_auto_install:
         <Filename Value="doc/alefa.1"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="5"/>
-        <TopLine Value="43"/>
-        <CursorPos Y="52"/>
-        <UsageCount Value="103"/>
+        <TopLine Value="21"/>
+        <CursorPos X="159" Y="32"/>
+        <UsageCount Value="107"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit29>
@@ -354,7 +346,7 @@ override_dh_auto_install:
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="1"/>
         <CursorPos X="11" Y="8"/>
-        <UsageCount Value="101"/>
+        <UsageCount Value="105"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit30>
@@ -362,9 +354,8 @@ override_dh_auto_install:
         <Filename Value="README.md"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="4"/>
-        <TopLine Value="32"/>
-        <CursorPos Y="39"/>
-        <UsageCount Value="101"/>
+        <CursorPos X="106" Y="5"/>
+        <UsageCount Value="105"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit31>

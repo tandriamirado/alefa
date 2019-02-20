@@ -2,7 +2,7 @@ Introduction
 ============
 "alefa" means "run", "go", "launch" or "execute" in malagasy language.
 
-"alefa" is a command line utility that allows to control the launch and execution of other programs.
+"alefa" is a command line utility that allows to control the launch and execution of other programs. No more wasted time: alefa is there!
 
 It is often useful to write (more or less) simple scripts to rerun some commands until they "succeed", or to launch other commands indefinitely. There are numerous common use cases.
 
@@ -29,6 +29,9 @@ Options
 
        -i,  --infinite
               Re-run until the end of time (or until interrupted by ctrl + c)
+
+       -l   --file_list
+              Run command on each file in the list
 
        -t,  --tries=NUMBER
               Set number of retries to NUMBER (0 unlimits).

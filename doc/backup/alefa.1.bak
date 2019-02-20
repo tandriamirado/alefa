@@ -29,7 +29,7 @@ Mandatory arguments to long options are mandatory for short options too.
 .SH DESCRIPTION
 .PP
 \fBalefa\fP  is a command line utility that allows to control the launch and execution of other programs.
-For example, it is often useful to write (more or less) simple scripts to rerun some commands until they "succeed", or to launch other commands indefinitely.
+For example, it is often useful to write (more or less) simple scripts to rerun some commands until they "succeed", or to launch other commands indefinitely. No more wasted time: alefa is there!
 
 There are numerous common use cases, yet it is always when we don't have the time nor the mood to type such scripts that we should. Such things should be easily automated so that we can do other tasks without being distracted and without having to restart such frustrating commands ourselves by hand: \fBwithout having to write scripts!\fP
 
@@ -45,6 +45,9 @@ Show the help screen.
 .TP
 \fB-i,  --infinite\fR
 Re-run until the end of time (or until interrupted by ctrl + c)
+.TP
+\fB-l   --file_list\fR
+Run command on each file in the list
 .TP
 \fB-t,  --tries=NUMBER\fR
 Set number of retries to NUMBER (0 unlimits).
