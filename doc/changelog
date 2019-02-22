@@ -1,6 +1,11 @@
 This changelog is auto-generated using git-changelog.
 See https://github.com/lkdjiin/git-changelog for more information.
 
+* 2019-02-23 Merge branch &#39;master&#39; of https://github.com/tandriamirado/alefa  
+* 2019-02-23 Compilable for/on Windows (again)  
+* 2019-02-23 Merge pull request #1 from tandriamirado/github  
+  Compilable for/on Windows (again)
+* 2019-02-22 Compilable for/on Windows (again)  
 * 2019-02-22 Modified documentation. changelog -&gt; doc/changelog  
 * 2019-02-22 new file:   changelog  
 * 2019-02-20 Minor updates to LazPackager config files  
