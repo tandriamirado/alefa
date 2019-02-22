@@ -51,6 +51,7 @@ type
     optWait: longint;
     optFileList: String;
     FileListMode: boolean;
+    ShellCmd, CmdEndingStr: String;
     procedure RunItAsIs;
     procedure setOptions;
     procedure initAlefa;
@@ -76,7 +77,10 @@ var
 begin
   nbTries := 0;
   if optInfinite then nbEndStr := 'Infinite' else nbEndStr := IntToStr(optTries) +':';
-  procExec.CommandLine := 'sh -c "' + appToRun +'"';
+
+//  procExec.CommandLine := 'sh -c "' + appToRun +'"';
+  procExec.CommandLine := ShellCmd + appToRun + CmdEndingStr;
+
   
   repeat
     if nbTries > 0 then begin
@@ -116,7 +120,7 @@ begin
       tmpFileName := FileList.Strings[i];
       if FileExists(tmpFileName) then begin
          writeln(IntToStr(i) + ': ' + tmpFileName);
-         procExec.CommandLine := 'sh -c "' + appToRun + ' ' + tmpFileName + '"';
+         procExec.CommandLine := ShellCmd + appToRun + ' ' + tmpFileName + CmdEndingStr;
          procExec.Active := true;
          postExecTry
       end else writeln(IntToStr(i) + ': ' + tmpFileName + ' doesn''t exist! Not processed!');
@@ -159,6 +163,15 @@ end;
 
 procedure TAlefa.initAlefa;
 begin
+  {$IFDEF UNIX}
+  ShellCmd := 'sh -c "';
+  CmdEndingStr := '"';
+  {$ENDIF}
+  {$IFDEF WINDOWS}
+  ShellCmd := 'c:\windows\system32\cmd.exe /c ';
+  CmdEndingStr := '';
+  {$ENDIF}
+
   OptShowExitCode := false;
   OptUntilExitCode0 := false;
   optTries := 0;
@@ -288,9 +301,7 @@ end;
 var
   Application: TAlefa;
 
-{$IFDEF WINDOWS}{$R project1.rc}{$ENDIF}
-
-{$IFDEF WINDOWS}{$R alefa.rc}{$ENDIF}
+// {$IFDEF WINDOWS}{$R alefa.rc}{$ENDIF}
 
 {$R *.res}
 

@@ -1,6 +1,8 @@
 This changelog is auto-generated using git-changelog.
 See https://github.com/lkdjiin/git-changelog for more information.
 
+* 2019-02-22 Modified documentation. changelog -&gt; doc/changelog  
+* 2019-02-22 new file:   changelog  
 * 2019-02-20 Minor updates to LazPackager config files  
 * 2019-02-20 Minor updates to LazPackager config files &amp; README  
 * 2019-02-19 NEW: -l,  --file_list          Run command on each file in the list  
