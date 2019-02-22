@@ -2,9 +2,9 @@ Introduction
 ============
 "**alefa**" means "run", "go", "launch" or "execute" in malagasy language.
 
-"**alefa**" is a command line utility that allows to control the launch and execution of other programs. No more wasted time: alefa is there!
+"**alefa**" is a command line utility that allows to control the launch and execution of other programs.
 
-It is often useful to write (more or less) simple scripts to rerun some commands until they "succeed", or to launch other commands indefinitely. There are numerous common use cases.
+It is often useful to write (more or less) simple scripts to rerun some commands until they "succeed", or to launch other commands indefinitely. To simulate the ability for an app to accept a filelist as a command-line argument, etc.. There are numerous common use cases. No more wasted time: alefa is there!
 
 Such things should be easily automated so that we can do other tasks without being distracted and without having to restart such frustrating commands ourselves by hand: without creating scripts!
 
