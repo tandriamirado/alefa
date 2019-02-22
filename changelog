@@ -1,0 +1,27 @@
+This changelog is auto-generated using git-changelog.
+See https://github.com/lkdjiin/git-changelog for more information.
+
+* 2019-02-20 Minor updates to LazPackager config files  
+* 2019-02-20 Minor updates to LazPackager config files &amp; README  
+* 2019-02-19 NEW: -l,  --file_list          Run command on each file in the list  
+* 2016-08-30 Removed some useless directories  
+* 2016-08-30 * copyright notice: 2016 * added subversion and launchpad repositories * Debian and Ubuntu x64 binary: .deb file for easy install without compiling ;)  
+* 2015-08-08 Added author&#39;s Twitter in docs: https://twitter.com/tandriamirado  
+* 2015-08-08 Debian changelog  
+* 2015-08-08 v0.2.0.1 - alefa returns a usable ExitCode. Doc &amp; man (examples, contacts). .deb: idem  
+* 2015-08-07 We are not in 2008 nor 2009: (c) = 2015  
+* 2015-08-07 Code cleaning. And we are in 2015, not in 2008 (copyrights)  
+* 2015-08-07 md formating  
+* 2015-08-07 md formating  
+* 2015-08-07 Merge remote-tracking branch &#39;github/master&#39;  
+* 2015-08-07 Delete LICENSE  
+* 2015-08-07 Initial commit  
+* 2015-08-07 .deb package building. README* and manpage.  
+* 2015-08-06 LazPackager init (for .deb packaging)  
+* 2015-08-05 README* and man page  
+* 2015-08-04 man file  
+* 2015-08-03 Je ne sais plus! Coupure de courant à 2h du matin, commit 12h après! c*lés!  
+* 2015-08-03 Debug options to &#39;auto&#39;. -&gt; no more unhandled exceptions when exiting.  
+* 2015-08-03 path for output files changed  
+* 2015-08-02 &quot;alefa&quot; version antares (2009)  
+* 2015-08-02 alefa version &quot;phenix&quot;.  
