@@ -118,12 +118,12 @@ begin
 
   for i := 0 to (FileNumber -1) do begin
       tmpFileName := FileList.Strings[i];
-      if FileExists(tmpFileName) then begin
+//      if FileExists(tmpFileName) then begin
          writeln(IntToStr(i) + ': ' + tmpFileName);
          procExec.CommandLine := ShellCmd + appToRun + ' ' + tmpFileName + CmdEndingStr;
          procExec.Active := true;
          postExecTry
-      end else writeln(IntToStr(i) + ': ' + tmpFileName + ' doesn''t exist! Not processed!');
+//      end else writeln(IntToStr(i) + ': ' + tmpFileName + ' doesn''t exist! Not processed!');
   end;
 end;
 
