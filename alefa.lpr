@@ -134,7 +134,7 @@ begin
   if HasOption('i', 'infinite') then optInfinite := true;
   // -t, --tries=NUMBER: tries NUMBER times. Default: 5
   if HasOption('t', 'tries') then optTries := StrToInt(GetOptionValue('t', 'tries'))
-     else optTries := 5;
+     else optTries := 1;
   // -u, --unlimits: unlimits tries, equiv: -t 0
   if HasOption('u', 'unlimits') then begin
      OptUntilExitCode0 := true;
