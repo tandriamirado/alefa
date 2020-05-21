@@ -3,11 +3,13 @@ Introduction
 "alefa" veut dire "lancer" en langue malgache.
 
 "alefa" est un utilitaire en ligne de commande qui permet de contrôler le lancement et l'exécution d'autres programmes.
-Il est par exemple souvent utile de devoir faire des scripts plus ou moins simples pour relancer certaines commandes jusqu'à ce qu'elles "réussissent" leurs actions, d'en lancer d'autres indéfiniment. De simuler la possibilité pour une application d'accepter une liste de fichiers comme argument en ligne de commande, etc.. Il y a de nombreux cas d'utilisation. Assez de temps perdu: alefa s'en charge!
+Il est par exemple souvent utile de devoir faire des scripts plus ou moins simples pour relancer certaines commandes jusqu'à ce qu'elles "réussissent" leurs actions, d'en lancer d'autres indéfiniment. De simuler la possibilité pour une application d'accepter une liste de fichiers comme argument en ligne de commande, etc.. Il y a de nombreux cas d'utilisation. Assez de temps perdu:
 
 Les cas d'utilisations sont nombreuses et courantes, pourtant c'est toujours quand on est pressé et qu'on n'a pas le temps ni l'humeur de taper de tels scripts qu'on doit le faire. Certaines choses devraient être automatisables facilement afin que l'on puisse faire autre chose sans être déconcentré et sans avoir à relancer une commande de malheur soi-même manuellement: sans avoir à créer de tels scripts!
 
-"alefa" y remédie. J'ai décidé de le créer un jour où j'en avais marre de créer, modifier et réadapter certains scripts pour faire des tâches pourtant simples et usuelles.
+"alefa" y remédie.
+
+"alefa" retourne le dernier ExitCode de l'application lancée, de sorte que vous pouvez en faire quelque chose et agir en conséquence.
 
 Synopsys
 ========
@@ -67,10 +69,10 @@ Signalez les bugs à <thierry.andriamirado@netsika.net>
 
 Sites web
 =========
-http://thierry.andriamirado.netsika.net
 https://github.com/tandriamirado/alefa
 https://sourceforge.net/projects/alefa/
 https://launchpad.net/alefa
+http://thierry.andriamirado.netsika.net
 
 Nota Bene
 =========
@@ -85,7 +87,7 @@ Twitter: https://twitter.com/tandriamirado
 
 Copyright and License
 =====================
-Copyright 2008-2019 Thierry Andriamirado.
+Copyright 2008-2020 Thierry Andriamirado.
 
 GNU General Public License; either version 2 of  the  License, or (at your option) any later version.
 

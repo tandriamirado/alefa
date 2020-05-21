@@ -123,7 +123,6 @@ override_dh_auto_install:
       <Unit0>
         <Filename Value="alefa.lpr"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <TopLine Value="113"/>
         <CursorPos X="3" Y="126"/>
         <UsageCount Value="165"/>
@@ -308,9 +307,10 @@ override_dh_auto_install:
       <Unit26>
         <Filename Value="doc/README"/>
         <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="74"/>
-        <CursorPos X="20" Y="91"/>
+        <TopLine Value="78"/>
+        <CursorPos Y="77"/>
         <UsageCount Value="129"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="None"/>
@@ -319,8 +319,8 @@ override_dh_auto_install:
         <Filename Value="doc/README.fr"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="3"/>
-        <TopLine Value="71"/>
-        <CursorPos X="20" Y="88"/>
+        <TopLine Value="63"/>
+        <CursorPos Y="76"/>
         <UsageCount Value="129"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="None"/>
@@ -338,8 +338,8 @@ override_dh_auto_install:
         <Filename Value="doc/alefa.1"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="5"/>
-        <TopLine Value="13"/>
-        <CursorPos X="20" Y="112"/>
+        <TopLine Value="102"/>
+        <CursorPos X="306" Y="32"/>
         <UsageCount Value="115"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="None"/>
@@ -357,7 +357,8 @@ override_dh_auto_install:
         <Filename Value="README.md"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="4"/>
-        <CursorPos Y="6"/>
+        <TopLine Value="81"/>
+        <CursorPos Y="90"/>
         <UsageCount Value="113"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="None"/>

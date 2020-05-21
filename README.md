@@ -4,7 +4,7 @@ Introduction
 
 "**alefa**" is a command line utility that allows to control the launch and execution of other programs.
 
-It is often useful to write (more or less) simple scripts to rerun some commands until they "succeed", or to launch other commands indefinitely. To simulate the ability for an app to accept a filelist as a command-line argument, etc.. There are numerous common use cases. No more wasted time: alefa is there!
+It is often useful to write (more or less) simple scripts to rerun some commands until they "succeed", or to launch other commands indefinitely. To simulate the ability for an app to accept a filelist as a command-line argument, etc.. There are numerous common use cases. No more wasted time:
 
 Such things should be easily automated so that we can do other tasks without being distracted and without having to restart such frustrating commands ourselves by hand: without creating scripts!
 
@@ -83,10 +83,10 @@ Report bugs and feature requests at https://github.com/tandriamirado/alefa/issue
 
 Websites
 ========
-http://thierry.andriamirado.netsika.net
 https://github.com/tandriamirado/alefa
 https://sourceforge.net/projects/alefa/
 https://launchpad.net/alefa
+http://thierry.andriamirado.netsika.net
 
 Nota Bene
 =========
@@ -101,7 +101,7 @@ Author
 
 Copyright and License
 =====================
-Copyright 2008-2019 Thierry Andriamirado.
+Copyright 2008-2020 Thierry Andriamirado.
 
 GNU General Public License; either version 2 of  the  License, or (at your option) any later version.
 
