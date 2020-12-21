@@ -18,7 +18,7 @@
       <AutoIncrementBuild Value="True"/>
       <MinorVersionNr Value="3"/>
       <BuildNr Value="8"/>
-      <StringTable CompanyName="Netsika" FileDescription="Allows to control the launch/execution of other programs" LegalCopyright="(c) 2016 Thierry Andriamirado &lt;thierry.andriamirado@netsika.net>" ProductName="alefa"/>
+      <StringTable CompanyName="Netsika" FileDescription="Allows to control the launch/execution of other programs" LegalCopyright="(c) 2020Thierry Andriamirado &lt;thierry.andriamirado@netsika.net>" ProductName="alefa"/>
     </VersionInfo>
     <CustomData Count="13">
       <Item0 Name="lazpackager/copyright" Value="2019 Thierry Andriamirado"/>
@@ -123,6 +123,7 @@ override_dh_auto_install:
       <Unit0>
         <Filename Value="alefa.lpr"/>
         <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
         <TopLine Value="113"/>
         <CursorPos X="3" Y="126"/>
         <UsageCount Value="165"/>
@@ -307,9 +308,8 @@ override_dh_auto_install:
       <Unit26>
         <Filename Value="doc/README"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="78"/>
+        <TopLine Value="70"/>
         <CursorPos Y="77"/>
         <UsageCount Value="129"/>
         <Loaded Value="True"/>
