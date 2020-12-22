@@ -2,7 +2,7 @@ program alefa;
 
 { <description>
 
-  Copyright (C) 2016 Thierry Andriamirado <thierry.andriamirado@netsika.net>
+  Copyright (C) 2020 Thierry Andriamirado <thierry.andriamirado@netsika.net>
 
   This source is free software; you can redistribute it and/or modify it under
   the terms of the GNU General Public License as published by the Free
@@ -249,7 +249,7 @@ procedure TAlefa.WriteHelp;
 begin
   { add your help code here }
   writeln('Alefa, application launch helper');
-  writeln('Copyright (c) 2016 by Thierry Andriamirado');
+  writeln('Copyright (c) 2020 by Thierry Andriamirado');
   WriteLn('');
   WriteLn('  -h,  --help               show this help screen.');
   WriteLn('[Normal mode]');
@@ -280,7 +280,7 @@ end;
 procedure TAlefa.ShowUsage;
 begin
   writeln('Alefa, application launch helper');
-  writeln('Copyright (c) 2016 by Thierry Andriamirado');
+  writeln('Copyright (c) 2020 by Thierry Andriamirado');
   WriteLn('');
   writeln('Usage: ', ExtractFileName(ExeName),' [OPTION]... COMMAND');
   WriteLn('Execute COMMAND. COMMAND has to be the last argument, after all the OPTIONs.');
