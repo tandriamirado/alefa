@@ -9,3 +9,8 @@ doc-devel/
 devdatas/
 
 terminalefa
+.bzr/
+.git/
+.gitignore
+.bzrignore
+
