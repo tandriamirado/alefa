@@ -65,14 +65,12 @@ J'utilise "alefa" tous les jours depuis sa création en 2008. J'ai décidé de l
 N'hésitez pas alors à faire des propositions selon vos besoins journaliers, et à me signaler les bugs.
 
 N'hésitez pas à faire des suggestions basées sur vos besoins journalières.
-Signalez les bugs à <thierry.andriamirado@netsika.net>
+Signalez les bugs à <thierry.andriamirado@gmail.com>
 
 Sites web
 =========
 https://github.com/tandriamirado/alefa
-https://sourceforge.net/projects/alefa/
-https://launchpad.net/alefa
-http://thierry.andriamirado.netsika.net
+https://www.facebook.com/thierryapps/
 
 Nota Bene
 =========
@@ -82,12 +80,12 @@ Nota Bene
 
 Auteur
 ======
-Thierry Andriamirado <thierry.andriamirado@netsika.net>
-Twitter: https://twitter.com/tandriamirado
+Thierry Andriamirado <thierry.andriamirado@gmail.com>
+https://www.facebook.com/thierryapps/
 
 Copyright and License
 =====================
-Copyright 2008-2020 Thierry Andriamirado.
+Copyright 2008-2025 Thierry Andriamirado.
 
 GNU General Public License; either version 2 of  the  License, or (at your option) any later version.
 

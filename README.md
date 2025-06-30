@@ -79,14 +79,12 @@ I use "**alefa**" every day since its creation in 2008. I decided to publish it,
 So.. feel free to make suggestions based on your daily needs, and please report bugs.
 
 Feel  free  to make suggestions based on your daily needs.
-Report bugs and feature requests at https://github.com/tandriamirado/alefa/issues or to <thierry.andriamirado@netsika.net>
+Report bugs and feature requests at https://github.com/tandriamirado/alefa/issues or to <thierry.andriamirado@gmail.com>
 
 Websites
 ========
 https://github.com/tandriamirado/alefa
-https://sourceforge.net/projects/alefa/
-https://launchpad.net/alefa
-http://thierry.andriamirado.netsika.net
+https://www.facebook.com/thierryapps/
 
 Nota Bene
 =========
@@ -96,12 +94,12 @@ Nota Bene
 
 Author
 ======
-**Thierry Andriamirado** <thierry.andriamirado@netsika.net>
-**Twitter**: https://twitter.com/tandriamirado
+**Thierry Andriamirado** <thierry.andriamirado@gmail.com>
+**Contact**: https://www.facebook.com/thierryapps/
 
 Copyright and License
 =====================
-Copyright 2008-2020 Thierry Andriamirado.
+Copyright 2008-2025 Thierry Andriamirado.
 
 GNU General Public License; either version 2 of  the  License, or (at your option) any later version.
 

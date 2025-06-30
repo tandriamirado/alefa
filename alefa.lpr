@@ -33,7 +33,8 @@ uses
 
 const
   authorMail = 'thierry.andriamirado@netsika.net';
-  authorTwitter = 'http://twitter.com/tandriamirado';
+  //authorTwitter = 'http://twitter.com/tandriamirado';
+  authorContact = 'https://www.facebook.com/thierryapps/';
   
 type
 
@@ -273,7 +274,8 @@ begin
   writeln('Type "man alefa" for the complete manual page');
   WriteLn('--');
 //  WriteLn('Report bugs to <' + authorMail + '>');
-  WriteLn('Report bugs to ' + authorTwitter);
+//  WriteLn('Report bugs to ' + authorTwitter);
+  WriteLn('Report bugs to <' + authorContact + '>');
 
 end;
 
@@ -294,7 +296,8 @@ begin
   writeln('Type "man alefa" for the complete manual page');
   WriteLn('--');
  //  WriteLn('Report bugs to <' + authorMail + '>');
-  WriteLn('Report bugs to ' + authorTwitter);
+  //WriteLn('Report bugs to ' + authorTwitter);
+    WriteLn('Report bugs to <' + authorContact + '>');
 
 end;
 
